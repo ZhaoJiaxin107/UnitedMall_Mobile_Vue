@@ -1,0 +1,417 @@
+@charset "utf-8";
+body {
+  overflow-x: hidden;
+}
+.wrap {
+  width: calc(100% - 20px*2);
+  max-width: 750px;
+  margin: 0 auto;
+}
+.wrap header {
+  height: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap header a > img {
+  width: 1.5rem;
+  height: 0.29rem;
+}
+.wrap header form input {
+  width: 3.06rem;
+  height: 0.4rem;
+  background-color: #EEEEEE;
+  border-radius: 0.07rem;
+  text-align: center;
+  font-size: 0.16rem;
+}
+.wrap header form input::-webkit-input-placeholder {
+  color: #C9C9C9;
+}
+.wrap header i {
+  font-size: 0.55rem;
+}
+.wrap nav {
+  width: 100%;
+  height: 0.75rem;
+}
+.wrap nav .list {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 0.1rem;
+  position: relative;
+}
+.wrap nav .list li {
+  flex-grow: 1;
+  margin-right: 0.4rem;
+}
+.wrap nav .list li a {
+  display: inline-block;
+  box-sizing: border-box;
+  font: bold 0.28rem/0.71rem "微软雅黑";
+  color: #494949;
+}
+.wrap nav .list li a:hover {
+  color: #C54473;
+  border-bottom: 4px solid #C54473;
+}
+.wrap nav .list .downarrow {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  right: -0.2rem;
+  font-size: 0.4rem;
+  text-align: center;
+  color: #c3c3c3;
+}
+.wrap nav .list::-webkit-scrollbar {
+  display: none;
+}
+.wrap .sectionnav {
+  width: 100%;
+  max-width: 750px;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrap .sectionnav a {
+  display: inline-block;
+  text-align: center;
+}
+.wrap .sectionnav a img {
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 0.2rem;
+}
+.wrap .sectionnav a em {
+  font: 0.3rem/1 "微软雅黑";
+  color: #717171;
+}
+.wrap .cosmeticnav {
+  margin: 0.2rem 0;
+  width: 100%;
+  height: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.wrap .cosmeticnav li {
+  width: 25%;
+  height: 100%;
+  line-height: 0.8rem;
+  border: 1px solid #ebebeb;
+  text-align: center;
+}
+.wrap .cosmeticnav li:hover {
+  background-color: #f26b11;
+}
+.wrap .cosmeticnav li:hover a {
+  color: #ffffff;
+}
+.wrap .cosmeticnav li a {
+  color: #3c3c3c;
+  font: 0.3rem/1 "微软雅黑";
+}
+.wrap .cosmeticnav li:nth-last-of-type(-n+3) {
+  border-left-style: none;
+}
+.wrap .cosmeticlist .cosmetic {
+  width: 100%;
+  height: 3rem;
+  box-shadow: 0 0 0.2rem #eeeeee;
+  border: 1px solid #ebebeb;
+  display: flex;
+  margin-bottom: 0.34rem;
+}
+.wrap .cosmeticlist .cosmetic:hover .cosmeticdesc h3 {
+  color: #ef6b16;
+  text-decoration: underline;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticimg {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticimg .first {
+  width: 2.16rem;
+  height: 2.2rem;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticimg .second {
+  width: 2.18rem;
+  height: 2.98rem;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticdesc {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticdesc h3 {
+  font: 0.3rem/1 "微软雅黑";
+  color: #2e2e2e;
+  margin-top: 0.42rem;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticdesc .price {
+  font-size: 0.28rem;
+  color: #db3c39;
+  margin-top: 0.2rem;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticdesc .price b {
+  font-size: 0.21rem;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticdesc .sell {
+  margin-top: 0.3rem;
+  font-size: 0.2rem;
+  color: #bebebe;
+}
+.wrap .cosmeticlist .cosmetic .cosmeticdesc button {
+  margin-top: 0.32rem;
+  width: 1.64rem;
+  height: 0.52rem;
+  border-radius: 0.05rem;
+  background-color: #f26b11;
+  color: #f1f1f1;
+  font-size: 0.23rem;
+  cursor: pointer;
+}
+.banner {
+  margin: 0 auto;
+  max-width: 750px;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+}
+.graypadding {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  height: 0.3rem;
+  background-color: #f1f1f1;
+}
+.bt {
+  border-top: 1px solid #ebebeb;
+}
+.bb {
+  border-bottom: 1px solid #ebebeb;
+}
+.hotspot {
+  width: 100%;
+  height: 3.8rem;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.hotspot .leftlimtedtime {
+  flex-basis: 50%;
+  height: 100%;
+  border: 1px solid #ebebeb;
+  border-left-style: none;
+}
+.hotspot .leftlimtedtime h2 {
+  margin: 0.15rem 0 0.1rem 0.2rem;
+}
+.hotspot .leftlimtedtime h2 .timer {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+.hotspot .leftlimtedtime h2 span {
+  font: bold 0.3rem/1 "微软雅黑";
+  color: #ff3179;
+  text-shadow: 0 0 0.05rem #8a8a8a;
+  padding-left: 0.15rem;
+  letter-spacing: 0.1em;
+}
+.hotspot .leftlimtedtime .flag {
+  font: 0.21rem/0.3rem "微软雅黑";
+  color: #999999;
+  text-shadow: 0 0 0.02rem #8a8a8a;
+  letter-spacing: 0.01rem;
+  padding-bottom: 0.06rem;
+  margin-left: 0.2rem;
+}
+.hotspot .leftlimtedtime .countdown {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hotspot .leftlimtedtime .countdown .count {
+  width: 1.65rem;
+  height: 0.45rem;
+  margin: 0 0.27rem 0 0.2rem;
+}
+.hotspot .leftlimtedtime .countdown .spike {
+  display: inline-block;
+  width: 0.96rem;
+  height: 0.4rem;
+  background: url(../images/index/bg.jpg) no-repeat;
+  font: bold 0.25rem/0.4rem "微软雅黑";
+  text-align: center;
+  letter-spacing: 0.02rem;
+}
+.hotspot .leftlimtedtime .towel {
+  width: 100%;
+  margin-top: 0.24rem;
+  display: flex;
+  justify-content: center;
+}
+.hotspot .leftlimtedtime .towel img {
+  width: 2.9rem;
+  height: 2.1rem;
+}
+.hotspot .rightnewbrand {
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.hotspot .rightnewbrand .newbrand {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+.hotspot .rightnewbrand .newbrand h2 {
+  margin: 0.15rem 0 0.1rem 0.2rem;
+  display: flex;
+  align-items: center;
+}
+.hotspot .rightnewbrand .newbrand h2 span {
+  font: bold 0.3rem/1 "微软雅黑";
+  color: #ff3179;
+  text-shadow: 0 0 0.05rem #8a8a8a;
+  letter-spacing: 0.1em;
+}
+.hotspot .rightnewbrand .newbrand h2 .discount {
+  display: inline-block;
+  width: 0.28rem;
+  height: 0.23rem;
+  background-image: linear-gradient(to right, #ff115f 0%, #fd3799 50%);
+  color: #f5f5f7;
+  font: 0.2rem/0.23rem "微软雅黑";
+  text-align: center;
+  margin-left: 0.05rem;
+}
+.hotspot .rightnewbrand .newbrand .flag {
+  font: 0.21rem/0.3rem "微软雅黑";
+  color: #999999;
+  text-shadow: 0 0 0.02rem #8a8a8a;
+  letter-spacing: 0.01rem;
+  padding-bottom: 0.06rem;
+  margin-left: 0.2rem;
+}
+.hotspot .rightnewbrand .newbrand .brand {
+  width: 0.93rem;
+  height: 0.32rem;
+  margin: 0.2rem 0 0 0.2rem;
+}
+.hotspot .rightnewbrand .newbrandimg {
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+.hotspot .rightnewbrand .newbrandimg img {
+  width: 1.28rem;
+  height: 1.78rem;
+  line-height: 1.78rem;
+  margin-top: 0.05rem;
+}
+.hotspot .rightnewbrand .teneveryday,
+.hotspot .rightnewbrand .fight {
+  width: 49.6%;
+  height: 50%;
+  position: relative;
+  border-top: 1px solid #ebebeb;
+}
+.hotspot .rightnewbrand .teneveryday h2,
+.hotspot .rightnewbrand .fight h2 {
+  margin: 0.15rem 0 0.1rem 0.2rem;
+  font: bold 0.3rem/1 "微软雅黑";
+  color: #ff3179;
+  text-shadow: 0 0 0.05rem #8a8a8a;
+  letter-spacing: 0.1em;
+}
+.hotspot .rightnewbrand .teneveryday .flag,
+.hotspot .rightnewbrand .fight .flag {
+  font: 0.21rem/0.3rem "微软雅黑";
+  color: #999999;
+  text-shadow: 0 0 0.02rem #8a8a8a;
+  letter-spacing: 0.01rem;
+  padding-bottom: 0.06rem;
+  margin-left: 0.2rem;
+}
+.hotspot .rightnewbrand .teneveryday img,
+.hotspot .rightnewbrand .fight img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hotspot .rightnewbrand .teneveryday .coat,
+.hotspot .rightnewbrand .fight .coat {
+  width: 0.7rem;
+  height: 0.9rem;
+}
+.hotspot .rightnewbrand .teneveryday .roll,
+.hotspot .rightnewbrand .fight .roll {
+  width: 1.1rem;
+  height: 0.9rem;
+}
+.hotspot .rightnewbrand .fight {
+  border-left: 1px solid #ebebeb;
+}
+.add {
+  max-width: 750px;
+  width: 100%;
+  height: 1.2rem;
+  margin: 0 auto;
+}
+.tabnav {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 750px;
+  height: 1.2rem;
+  border-top: 1px solid #ebebeb;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tabnav a {
+  text-align: center;
+}
+.tabnav a i {
+  display: block;
+  font-size: 0.5rem;
+  color: #8a8a8a;
+}
+.tabnav a em {
+  font: 0.2rem/0.32rem "微软雅黑";
+  color: #878787;
+}
+.tabnav a:nth-of-type(1) i,
+.tabnav a:nth-of-type(1) em {
+  color: #ef6b16;
+}

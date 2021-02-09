@@ -1,0 +1,297 @@
+@charset "utf-8";
+.headerbg {
+  background-color: #f26b11;
+}
+.wrap {
+  max-width: 750px;
+  margin: 0 auto;
+  width: 100%;
+}
+.wrap header {
+  max-width: 750px;
+  width: calc(100% - 30px*2);
+  height: 0.9rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap header a img {
+  width: 0.17rem;
+  height: 0.28rem;
+}
+.wrap header h3 {
+  font: 0.35rem/1 "微软雅黑";
+  color: #fefcff;
+}
+.wrap header i {
+  font-size: 0.55rem;
+  color: #fefcff;
+}
+.wrap .product {
+  width: calc(100% - 40px*2);
+  max-width: 750px;
+  height: 2.07rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.wrap .product .name {
+  font: 0.29rem/0.5rem "微软雅黑";
+  color: #323232;
+}
+.wrap .product .price {
+  font-size: 0.27rem;
+  color: #e3383e;
+}
+.wrap .product .price span {
+  font-size: 0.22rem;
+  color: #878787;
+}
+.wrap .purchase {
+  width: calc(100% - 23px*2);
+  max-width: 750px;
+  height: 4rem;
+  color: #323232;
+  font-size: 0.25rem;
+  margin: 0 auto;
+}
+.wrap .purchase .promotion {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+}
+.wrap .purchase .promotion p .discount {
+  font-size: 0.2rem;
+  color: #b12818;
+  padding: 0.08rem 0.1rem;
+  border: 1px solid #b12818;
+  border-radius: 0.04rem;
+  margin: 0 0.15rem;
+}
+.wrap .purchase .promotion a > i {
+  font-size: 0.26rem;
+  color: #b4b4b4;
+}
+.wrap .purchase .purchasenumber {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+}
+.wrap .purchase .purchasenumber .number i,
+.wrap .purchase .purchasenumber .number input {
+  display: inline-block;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  font-size: 0.2rem;
+  text-align: center;
+  border: 1px solid #515151;
+  color: #323232;
+}
+.wrap .purchase .purchasenumber .number i {
+  width: 0.6rem;
+}
+.wrap .purchase .purchasenumber .number input {
+  width: 0.8rem;
+  vertical-align: top;
+  margin-left: -0.08rem;
+  border-left-style: none;
+}
+.wrap .purchase .purchasenumber .number .minus {
+  border-radius: 0.06rem 0 0 0.06rem;
+}
+.wrap .purchase .purchasenumber .number .plus {
+  margin-left: -0.08rem;
+  border-radius: 0 0.06rem 0.06rem 0;
+  border-left-style: none;
+}
+.wrap .purchase .property {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap .purchase .property a > i {
+  font-size: 0.26rem;
+  color: #b4b4b4;
+}
+.wrap .purchase .size {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #f1f1f1;
+}
+.wrap .purchase .size h4 {
+  font-size: 0.24rem;
+  color: #cbcbcb;
+}
+.wrap .purchase .size button {
+  padding: 0.18rem 0.5rem;
+  background-color: #e1e1e3;
+  font-size: 0.3rem;
+  color: #ffffff;
+  border-radius: 0.05rem;
+  border: none;
+  cursor: pointer;
+}
+.wrap .purchase .size button:hover {
+  background-color: #e43a3d;
+}
+.wrap .purchase .size .thirty {
+  margin-left: 0.7rem;
+}
+.wrap .purchase .size .five {
+  margin-left: 0.15rem;
+}
+.wrap .detailtitle {
+  width: calc(100% - 23px*2);
+  max-width: 750px;
+  margin: 0 auto;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+.wrap .detailtitle h3 {
+  font-size: 0.3rem;
+  color: #323232;
+}
+.wrap .commentcontent {
+  width: calc(100% - 23px*2);
+  max-width: 750px;
+  margin: 0 auto;
+  height: 3.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.wrap .commentcontent .user {
+  font-size: 0.22rem;
+  color: #666666;
+}
+.wrap .commentcontent .comment {
+  font-size: 0.25rem;
+  color: #323232;
+}
+.wrap .commentcontent .commentimg {
+  display: flex;
+  justify-content: flex-start;
+}
+.wrap .commentcontent .commentimg img {
+  width: 1.55rem;
+  height: 1.51rem;
+  margin-left: 0.1rem;
+}
+.wrap .commentcontent .time {
+  font-size: 0.22rem;
+  color: #9a9a9a;
+}
+.wrap .conclude {
+  width: calc(100% - 23px*2);
+  max-width: 750px;
+  margin: 0 auto;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #f1f1f1;
+}
+.wrap .conclude span {
+  font-size: 0.23rem;
+  color: #9a9a9a;
+}
+.banner {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.banner img {
+  width: 7.5rem;
+  height: 7.48rem;
+}
+.paddingone,
+.paddingtwo {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.paddingone {
+  height: 0.15rem;
+  background-color: #f0f0f0;
+}
+.paddingtwo {
+  height: 0.21rem;
+  background-color: #f1f1f1;
+}
+.detailimg {
+  margin: 0 auto;
+  max-width: 750px;
+}
+.detailimg img {
+  width: 7.5rem;
+  height: 23.78rem;
+}
+.add {
+  max-width: 750px;
+  width: 100%;
+  height: 1.2rem;
+  margin: 0 auto;
+}
+.tabnav {
+  width: 100%;
+  max-width: 750px;
+  height: 1.2rem;
+  border-top: 1px solid #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  display: flex;
+}
+.tabnav .shoppingcart {
+  width: 23%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabnav .shoppingcart a i {
+  display: block;
+  font-size: 0.5rem;
+  color: #888888;
+}
+.tabnav .shoppingcart a em {
+  font: 0.2rem/0.32rem "微软雅黑";
+  color: #878787;
+}
+.tabnav .addshoppingcart,
+.tabnav .purchaseatonce {
+  width: 38.5%;
+  height: 100%;
+}
+.tabnav .addshoppingcart button,
+.tabnav .purchaseatonce button {
+  width: 100%;
+  height: 100%;
+  font-size: 0.3rem;
+  color: #ffffff;
+}
+.tabnav .addshoppingcart button {
+  background-color: #f26b11;
+  cursor: pointer;
+}
+.tabnav .purchaseatonce button {
+  background-color: #e43a3d;
+  cursor: pointer;
+}

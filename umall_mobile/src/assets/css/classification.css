@@ -1,0 +1,160 @@
+@charset "utf-8";
+.headerbg {
+  background-color: #f26b11;
+}
+.wrap {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.wrap header {
+  width: calc(100% - 30px*2);
+  height: 0.9rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap header a img {
+  width: 0.17rem;
+  height: 0.28rem;
+}
+.wrap header h3 {
+  font: 0.35rem/1 "微软雅黑";
+  color: #fefcff;
+}
+.wrap header i {
+  font-size: 0.55rem;
+  color: #fefcff;
+}
+main {
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+}
+main nav {
+  width: 22%;
+  height: 12.64rem;
+  border-right: 1px solid #ebebeb;
+}
+main nav .leftnav {
+  width: 100%;
+  height: 10.4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main nav .leftnav li {
+  width: 100%;
+  box-sizing: border-box;
+  height: 0.52rem;
+  line-height: 0.52rem;
+  text-align: center;
+}
+main nav .leftnav li:hover {
+  border-left: 0.08rem solid #f26b11;
+}
+main nav .leftnav li:hover a {
+  color: #f26b11;
+}
+main nav .leftnav li a {
+  font-size: 0.3rem;
+  color: #666666;
+}
+main .rightlist {
+  width: 88%;
+  height: 10.4rem;
+}
+main .rightlist .washhair {
+  width: 100%;
+  height: 6.15rem;
+}
+main .rightlist .washhair .title {
+  width: calc(100% - 50px*2);
+  margin: 0 auto;
+  padding: 0.5rem 0 0.2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .rightlist .washhair .title h3 {
+  font-size: 0.27rem;
+  color: #464646;
+}
+main .rightlist .washhair .title .more {
+  font-size: 0.25rem;
+  color: #666666;
+}
+main .rightlist .washhair .list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+main .rightlist .washhair .list li {
+  width: 33.3%;
+  height: 2rem;
+  padding-top: 0.3rem;
+}
+main .rightlist .washhair .list li a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .rightlist .washhair .list li a img {
+  display: block;
+  width: 1.51rem;
+  height: 1.51rem;
+}
+main .rightlist .washhair .list li a span {
+  font-size: 0.25rem;
+  color: #878787;
+}
+main .rightlist .dryhair {
+  width: 100%;
+  height: 4.25rem;
+}
+main .rightlist .dryhair .title {
+  width: calc(100% - 50px*2);
+  margin: 0 auto;
+  padding: 0.5rem 0 0.2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .rightlist .dryhair .title h3 {
+  font-size: 0.27rem;
+  color: #464646;
+}
+main .rightlist .dryhair .title .more {
+  font-size: 0.25rem;
+  color: #666666;
+}
+main .rightlist .dryhair .list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+main .rightlist .dryhair .list li {
+  width: 33.3%;
+  height: 2rem;
+  padding-top: 0.3rem;
+}
+main .rightlist .dryhair .list li a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .rightlist .dryhair .list li a img {
+  display: block;
+  width: 1.51rem;
+  height: 1.51rem;
+}
+main .rightlist .dryhair .list li a span {
+  font-size: 0.25rem;
+  color: #878787;
+}

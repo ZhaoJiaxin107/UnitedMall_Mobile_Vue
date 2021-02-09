@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <router-view/>
-    <!-- 公共的tabbar -->
-  </div>
+  <h3>Index</h3>
 </template>
 
 <script>
 export default {
-  name: 'App'
+
 }
 </script>
 

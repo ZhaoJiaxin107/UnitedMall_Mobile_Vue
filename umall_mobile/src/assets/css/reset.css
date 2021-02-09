@@ -1,0 +1,66 @@
+@charset "utf-8";
+/*样式重置 reset */
+/* *{ margin:0; padding:0; } */
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, input{
+    margin:0;/*去掉自带外间距*/
+    padding:0;/*去掉自带内填充*/
+}
+em, i{
+    font-style:normal;/*斜体扶正*/
+}
+ul,li{
+    list-style:none;/*去掉默认列表符*/
+}
+h1, h2, h3, h4, h5, h6, b, strong{
+    font-weight:normal;/*去掉标题自带加粗*/
+    font-size: 100%;
+}
+a{
+    text-decoration:none;/*去掉自带下划线*/
+}
+img{
+    border:none;/*去掉ie浏览器图片外面的边框*/
+    vertical-align:top;/*图片对齐方式*/
+}
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+button{
+    border: none;
+    outline: none;
+}
+textarea{
+    resize: none;
+    overflow: auto;
+}
+table{
+    border-collapse:collapse;/*去掉表格自带间隙*/
+    border-spacing:0;
+}
+body{
+    font-family:Arial,"微软雅黑", Helvetica, sans-serif;
+    font-size:12px;
+    line-height:1;
+    -webkit-text-size-adjust: 100%!important; /*禁止IOS调整字体大小*/
+}
+a,button,input,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);  /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+}
+
+/*public style*/
+.clearfix{
+    *zoom:1;/*IE浏览器清浮动*/
+}
+.clearfix:after{
+    content:'';/*添加一个空内容*/
+    display:block;/*转块*/
+    clear:both;/*清浮动*/
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}

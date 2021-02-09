@@ -1,0 +1,141 @@
+@charset "utf-8";
+.wrap {
+  width: calc(100% - 30px*2);
+  height: 0.9rem;
+  margin: 0 auto;
+  max-width: 750px;
+}
+.wrap header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap header .leftarrow {
+  width: 0.15rem;
+  height: 0.32rem;
+}
+.wrap header .logo {
+  width: 1.5rem;
+  height: 0.29rem;
+}
+.wrap header i {
+  font-size: 0.55rem;
+}
+.wrap .searchnav {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .searchnav .search {
+  width: 6.22rem;
+  height: 0.8rem;
+  background-color: #f26b11;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .searchnav .search img {
+  width: 0.26rem;
+  height: 0.27rem;
+  vertical-align: middle;
+}
+.wrap .searchnav .search input {
+  box-sizing: border-box;
+  height: 0.4rem;
+  width: 1.7rem;
+  text-indent: 0.22rem;
+  font-size: 0.27rem;
+}
+.wrap .searchnav .search input::-webkit-input-placeholder {
+  font-size: 0.27rem;
+  color: #f0f1f3;
+}
+.wrap .listpanel .listitem {
+  width: 100%;
+  height: 2.05rem;
+  border-bottom: 1px solid #d1d1d1;
+  display: flex;
+}
+.wrap .listpanel .listitem .leftimg {
+  width: 22.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.wrap .listpanel .listitem .leftimg img {
+  width: 1.55rem;
+  height: 1.56rem;
+}
+.wrap .listpanel .listitem .rightdesc {
+  width: calc(100% - 22.5%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.wrap .listpanel .listitem .rightdesc .content {
+  width: calc(100% - 0.42rem);
+  height: 1.56rem;
+  padding-left: 0.42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrap .listpanel .listitem .rightdesc .content a {
+  font: 0.25rem/0.38rem "微软雅黑";
+  color: #363636;
+}
+.wrap .listpanel .listitem .rightdesc .content a:hover {
+  text-decoration: underline;
+}
+.wrap .listpanel .listitem .rightdesc .content .price {
+  font-size: 0.27rem;
+  color: #e5383c;
+}
+.wrap .listpanel .listitem .rightdesc .content .price b {
+  font-size: 0.2rem;
+}
+.wrap .listpanel .listitem .rightdesc .content .comment {
+  font-size: 0.23rem;
+  color: #9a9a9a;
+}
+.wrap .add {
+  width: 100%;
+  max-width: 750px;
+  height: 1.2rem;
+  margin: 0 auto;
+}
+.tabnav {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 750px;
+  height: 1.2rem;
+  border-top: 1px solid #ebebeb;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tabnav a {
+  text-align: center;
+}
+.tabnav a i {
+  display: block;
+  font-size: 0.5rem;
+  color: #8a8a8a;
+}
+.tabnav a em {
+  font: 0.2rem/0.32rem "微软雅黑";
+  color: #878787;
+}
+.tabnav a:nth-of-type(1) i,
+.tabnav a:nth-of-type(1) em {
+  color: #ef6b16;
+}
