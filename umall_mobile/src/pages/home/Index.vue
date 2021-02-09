@@ -31,20 +31,6 @@
 
     <div class="add"></div>
     <!-- tabnav -->
-    <div class="tabnav">
-        <a href="#" class="first">
-            <i class="iconfont icon-shouye1"></i>
-            <em>首页</em>
-        </a>
-        <a href="#">
-            <i class="iconfont icon-48"></i>
-            <em>购物车</em>
-        </a>
-        <a href="#">
-            <i class="iconfont icon-iconfuzhi"></i>
-            <em>我的</em>
-        </a>
-    </div>
   </div>
 </template>
 
