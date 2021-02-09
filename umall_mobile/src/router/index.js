@@ -9,7 +9,8 @@ const router = new Router({
       path: '/',
       component: () => import('@/pages/home/Index')
     }
-  ]
+  ],
+  mode: 'history'
 })
 
 export default router

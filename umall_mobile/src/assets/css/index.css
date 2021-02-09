@@ -262,7 +262,7 @@ body {
   display: inline-block;
   width: 0.96rem;
   height: 0.4rem;
-  background: url(../images/index/bg.jpg) no-repeat;
+  background: url(/static/images/index/bg.jpg) no-repeat;
   font: bold 0.25rem/0.4rem "微软雅黑";
   text-align: center;
   letter-spacing: 0.02rem;
