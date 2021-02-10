@@ -6,6 +6,8 @@ import router from './router'
 import store from './store'
 // 引入reset.css
 import './assets/css/reset.css'
+// 引入全局过滤器
+import './filters/img'
 
 Vue.config.productionTip = false
 
