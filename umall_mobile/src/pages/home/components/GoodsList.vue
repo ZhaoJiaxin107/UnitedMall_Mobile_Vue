@@ -19,7 +19,7 @@
         <div class="cosmeticdesc">
           <h3>{{item.goodsname}}</h3>
           <p class="price"><b>￥</b>{{item.price}}</p>
-          <p class="sell">分类:{{item.secondcatename}}</p>
+          <p class="sell"><b>规格属性：</b>{{item.specsattr}}</p>
           <button>立即抢购</button>
         </div>
       </a>
@@ -30,12 +30,10 @@
 <script>
 export default {
   props: {
-    list: {
-      type: Array,
-      required: true
-    }
+    list: Array
   }
 }
+
 </script>
 
 <style>

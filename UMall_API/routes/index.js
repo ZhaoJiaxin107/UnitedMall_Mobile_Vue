@@ -37,9 +37,9 @@ router.get("/getseckill",async(req,res)=>{
 })
 //获取首页商品-推荐、最新上架、所有商品
 router.get("/getindexgoods",async(req,res)=>{
-	let data1 = await Db.select(req, `SELECT id,goodsname,price,market_price,img FROM ${tableNameGoods} WHERE status = 1 AND ishot = 1 LIMIT 10`);
-	let data2 = await Db.select(req, `SELECT id,goodsname,price,market_price,img FROM ${tableNameGoods} WHERE status = 1 AND isnew = 1 LIMIT 10`);
-	let data3 = await Db.select(req, `SELECT id,goodsname,price,market_price,img FROM ${tableNameGoods} WHERE status = 1 LIMIT 10`);
+	let data1 = await Db.select(req, `SELECT id,goodsname,price,market_price,img,specsid,specsattr FROM ${tableNameGoods} WHERE status = 1 AND ishot = 1 ORDER BY rand() LIMIT 3`);
+	let data2 = await Db.select(req, `SELECT id,goodsname,price,market_price,img,specsid,specsattr FROM ${tableNameGoods} WHERE status = 1 AND isnew = 1 ORDER BY rand() LIMIT 3`);
+	let data3 = await Db.select(req, `SELECT id,goodsname,price,market_price,img,specsid,specsattr FROM ${tableNameGoods} WHERE status = 1 ORDER BY rand() LIMIT 3`);
 	let data = [];
 	data.push({content:data1});
 	data.push({content:data2});

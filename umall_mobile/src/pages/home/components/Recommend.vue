@@ -3,11 +3,14 @@
     <van-tabs type="card" color="#f26b11"
     class="tabs">
       <van-tab title="热门推荐">
-        <u-goods-list :list = "list1"/>
+        <u-goods-list :list = "list.hot"/>
       </van-tab>
-      <van-tab title="发现好货"></van-tab>
-      <van-tab title="只看专场"></van-tab>
-      <van-tab title="只看商品"></van-tab>
+      <van-tab title="发现好货">
+        <u-goods-list :list = "list.new"/>
+      </van-tab>
+      <van-tab title="只看商品">
+        <u-goods-list :list = "list.all"/>
+      </van-tab>
     </van-tabs>
   </div>
 </template>
@@ -24,13 +27,13 @@ export default {
   },
   computed: {
     ...mapState({
-      list1: state => state.goods.list
+      list: state => state.goods.indexList
     })
   },
   mounted () {
-    if (this.list1.length === 0) {
+    if (this.list.length === 0) {
       // 重新获取商品数据
-      this.$store.dispatch('goods/getGoodsList')
+      this.$store.dispatch('goods/getIndexGoods')
     }
   }
 }
