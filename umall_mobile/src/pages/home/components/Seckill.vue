@@ -3,7 +3,7 @@
     <div class="leftlimtedtime">
       <h2>
         <img src="/static/images/index/timer.jpg" alt="timer" class="timer" />
-        <span>限时秒杀</span>
+        <span v-if = "this.list.length > 0">{{list[0].title}}</span>
       </h2>
       <p class="flag">每天零点场 好货秒不停</p>
       <div class="countdown">
@@ -21,7 +21,7 @@
     <div class="rightnewbrand">
       <div class="newbrand">
         <h2>
-          <span>品牌上新</span>
+          <span v-if = "this.list.length > 0">{{list[1].title}}</span>
           <em class="discount">折</em>
         </h2>
         <p class="flag">每日9点 抢大牌</p>
@@ -31,12 +31,12 @@
         <img src="/static/images/index/shop_1.jpg" alt="clothes" />
       </div>
       <div class="teneveryday">
-        <h2>每日十件</h2>
+        <h2 v-if = "this.list.length > 0">{{list[2].title}}</h2>
         <p class="flag">只为你选好货</p>
         <img src="/static/images/index/shop_2.jpg" alt="clothes" class="coat" />
       </div>
       <div class="fight">
-        <h2>拼啊</h2>
+        <h2 v-if = "this.list.length > 0">{{list[3].title}}</h2>
         <p class="flag">超级好价拼团</p>
         <img src="/static/images/index/shop_3.jpg" alt="clothes" class="roll" />
       </div>
@@ -45,7 +45,20 @@
 </template>
 
 <script>
-export default {}
+import { mapState } from 'vuex'
+export default {
+  computed: {
+    ...mapState({
+      list: state => state.seckill.list
+    })
+  },
+  mounted () {
+    if (this.list.length === 0) {
+      // 重新获取秒杀数据
+      this.$store.dispatch('seckill/getSeckillList')
+    }
+  }
+}
 </script>
 
 <style>
