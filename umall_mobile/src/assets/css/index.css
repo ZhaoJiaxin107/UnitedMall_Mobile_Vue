@@ -108,10 +108,6 @@ body {
   display: flex;
   margin-bottom: 0.34rem;
 }
-.wrap .cosmeticlist .cosmetic:hover .cosmeticdesc h3 {
-  color: #ef6b16;
-  text-decoration: underline;
-}
 .wrap .cosmeticlist .cosmetic .cosmeticimg {
   width: 50%;
   height: 100%;
@@ -152,7 +148,7 @@ body {
   color: #bebebe;
 }
 .wrap .cosmeticlist .cosmetic .cosmeticdesc button {
-  margin-top: 0.12rem;
+  margin-top: 0.32rem;
   width: 1.64rem;
   height: 0.52rem;
   border-radius: 0.05rem;

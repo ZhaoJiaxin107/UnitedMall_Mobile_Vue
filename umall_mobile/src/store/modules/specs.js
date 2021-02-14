@@ -13,7 +13,7 @@ export default {
     getSpecsList ({ commit }) {
       // 通过接口获取数据
       getSpecsList().then(res => {
-        console.log(res)
+        // console.log(res)
         commit('SET_LIST', res)
       })
     }

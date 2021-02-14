@@ -9,3 +9,16 @@ Vue.filter('recombinationImg', (imgSrc) => {
   }
   return imgSrc
 })
+
+// 字符串截取
+Vue.filter('substrName', (value, length, suffix = '...') => {
+  value = value.toString() // 转化为字符串
+  if (isNaN(length) || length <= 0) {
+    length = value.length
+  }
+  if (value.length <= length) {
+    // 字符串的长度比截取的长度小
+    return value
+  }
+  return value.substr(0, length) + suffix
+})
