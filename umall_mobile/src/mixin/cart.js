@@ -11,6 +11,8 @@ Vue.mixin({
       if (!userInfo) {
         // 没有登录， 不允许添加购物车
         Toast.fail('没有登录, 不允许添加购物车')
+        // 跳转至登录界面
+        this.$router.push('/login')
         return
       }
       // 转化成对象

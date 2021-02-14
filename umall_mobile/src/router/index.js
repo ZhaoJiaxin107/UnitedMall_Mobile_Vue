@@ -8,6 +8,10 @@ const router = new Router({
     {
       path: '/',
       component: () => import('@/pages/home/Index')
+    },
+    {
+      path: '/login',
+      component: () => import('@/pages/login/Index')
     }
   ],
   mode: 'history'
