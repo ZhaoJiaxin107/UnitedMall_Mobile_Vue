@@ -17,10 +17,10 @@
         </div>
         <!-- right -->
         <div class="cosmeticdesc">
-          <h3>{{item.goodsname | substrName(10)}}</h3>
+          <h3>{{item.goodsname | substrName(18)}}</h3>
           <p class="price"><b>￥</b>{{item.market_price}}</p>
           <p class="sell"><b>规格属性：</b>{{getSpecsName(item.specsid)}} - {{item.specsattr}}</p>
-          <button>立即抢购</button>
+          <button @click="addCart(item.id, 1)">立即抢购</button>
         </div>
       </a>
     </li>
@@ -31,7 +31,10 @@
 import { mapState } from 'vuex'
 export default {
   props: {
-    list: Array
+    list: {
+      type: Array,
+      require: true
+    }
   },
   computed: {
     ...mapState({

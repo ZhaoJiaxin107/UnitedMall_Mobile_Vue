@@ -7,7 +7,9 @@ import store from './store'
 // 引入reset.css
 import './assets/css/reset.css'
 // 引入全局过滤器
-import './filters/img'
+import './filters/goods'
+// 引入全局mixin
+import './mixin/cart'
 
 Vue.config.productionTip = false
 

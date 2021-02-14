@@ -31,6 +31,7 @@ export default {
     })
   },
   mounted () {
+    sessionStorage.setItem('user', JSON.stringify({uid: '8c08bf80-6e98-11eb-8393-0b0654bb2001'}))
     if (this.list.length === 0) {
       // 重新获取商品数据
       this.$store.dispatch('goods/getIndexGoods')
