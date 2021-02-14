@@ -5,6 +5,7 @@ import Vuex from 'vuex'
 import category from './modules/category'
 import banner from './modules/banner'
 import goods from './modules/goods'
+import specs from './modules/specs'
 
 // 使用vuex插件
 Vue.use(Vuex)
@@ -15,7 +16,8 @@ const store = new Vuex.Store({
     // 模块
     category,
     banner,
-    goods
+    goods,
+    specs
   }
 })
 

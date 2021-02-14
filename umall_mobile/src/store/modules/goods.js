@@ -19,7 +19,7 @@ export default {
     getIndexGoods ({ commit }) {
       // 通过接口获取数据
       getIndexGoods().then(res => {
-        console.log(res)
+        // console.log(res)
         const list = {
           hot: res[0].content || [],
           new: res[1].content || [],
