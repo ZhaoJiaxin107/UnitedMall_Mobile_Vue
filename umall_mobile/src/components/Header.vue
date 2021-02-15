@@ -2,8 +2,8 @@
   <!-- header -->
     <div class="wrap headerbg">
         <header>
-            <a href="./list.html">
-                <img src="/static/images/iconimg/arrleft_03.jpg" alt="arrleft">
+            <a>
+                <img src="/static/images/iconimg/arrleft_03.jpg" @click = "goBack" alt="arrleft">
             </a>
             <h3>{{title}}</h3>
             <i class="iconfont">&#xe626;</i>
@@ -15,6 +15,11 @@
 export default {
   props: {
     title: String
+  },
+  methods: {
+    goBack () {
+      this.$router.back()
+    }
   }
 
 }
