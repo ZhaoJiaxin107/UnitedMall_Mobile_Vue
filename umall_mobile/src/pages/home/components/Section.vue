@@ -13,10 +13,10 @@
         <img src="/static/images/index/icon_3.jpg" alt="contactus" />
         <em>联系我们</em>
       </a>
-      <a href="#">
+      <router-link to = "/classification">
         <img src="/static/images/index/icon_4.jpg" alt="itemclassification" />
         <em>商品分类</em>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>

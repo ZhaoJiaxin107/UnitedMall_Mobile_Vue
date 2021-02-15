@@ -1,17 +1,17 @@
 <template>
   <div class="tabnav">
-    <a href="#" class="first">
+    <router-link to ="/" exact-active-class="active">
       <i class="iconfont">&#xe600;</i>
       <em>首页</em>
-    </a>
-    <a href="#">
+    </router-link>
+    <router-link to ="/cart" exact-active-class="active">
       <i class="iconfont">&#xe630;</i>
       <em>购物车</em>
-    </a>
-    <a href="#">
+    </router-link>
+    <router-link to ="/mine" exact-active-class="active">
       <i class="iconfont">&#xe601;</i>
       <em>我的</em>
-    </a>
+    </router-link>
   </div>
 </template>
 
@@ -46,8 +46,8 @@ export default {}
   font: 0.2rem/0.32rem "微软雅黑";
   color: #878787;
 }
-.tabnav a:nth-of-type(1) i,
-.tabnav a:nth-of-type(1) em {
+.tabnav .active i,
+.tabnav .active em {
   color: #ef6b16;
 }
 
