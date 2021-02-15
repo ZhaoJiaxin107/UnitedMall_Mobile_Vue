@@ -43,4 +43,10 @@ const router = new Router({
   mode: 'history'
 })
 
+// 拦截
+// router.beforeEach((to, from, next) => {
+//   // 设置页面标题
+//   document.title = to.meta.title || 'United Mall(U.MOBILE.COM)'
+// })
+
 export default router

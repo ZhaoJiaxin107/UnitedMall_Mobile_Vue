@@ -1,10 +1,13 @@
 <template>
-  <h3>Shopping Cart</h3>
+  <u-header title = "购物车"/>
 </template>
 
 <script>
+import UHeader from '@/components/Header'
 export default {
-
+  components: {
+    UHeader
+  }
 }
 </script>
 

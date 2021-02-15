@@ -1,10 +1,13 @@
 <template>
-  <h3>Mine</h3>
+  <u-header title = "我的订单"/>
 </template>
 
 <script>
+import UHeader from '@/components/Header'
 export default {
-
+  components: {
+    UHeader
+  }
 }
 </script>
 
