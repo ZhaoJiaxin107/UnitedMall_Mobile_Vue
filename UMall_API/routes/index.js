@@ -62,7 +62,7 @@ router.get("/getgoods",async(req,res)=>{
         condition += ` AND goodsname LIKE '%${keyword}%'`
     }
     
-    let data = await Db.select(req, `SELECT id,goodsname,price,market_price,img FROM ${tableNameGoods} WHERE ${condition} `);
+    let data = await Db.select(req, `SELECT id,goodsname,price,market_price,img,specsid,specsattr FROM ${tableNameGoods} WHERE ${condition} `);
     res.send(Success(data));
 });
 //获取一条商品信息

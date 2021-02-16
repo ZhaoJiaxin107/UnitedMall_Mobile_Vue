@@ -102,6 +102,15 @@
   font-size: 0.23rem;
   color: #9a9a9a;
 }
+.wrap .listpanel .listitem .rightdesc .content button{
+  width: 1.64rem;
+  height: 0.32rem;
+  border-radius: 0.05rem;
+  background-color: #f26b11;
+  color: #f1f1f1;
+  font-size: 0.2rem;
+  cursor: pointer;
+}
 .wrap .add {
   width: 100%;
   max-width: 750px;
