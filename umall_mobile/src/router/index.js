@@ -40,7 +40,7 @@ const router = new Router({
       component: () => import('@/pages/classification/Index')
     },
     {
-      path: '/goodslist/:id',
+      path: '/goodslist/:id/:name',
       meta: {
         title: '商品列表'
       },

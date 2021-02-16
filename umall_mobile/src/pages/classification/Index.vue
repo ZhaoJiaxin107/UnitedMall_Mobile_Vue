@@ -10,7 +10,8 @@
       @changeCate = "changeCategory"/>
       <!-- rightlist -->
       <u-right-list
-      :list = "secondCategory"/>
+      :list = "secondCategory"
+      :firstCateName = "firstCateName"/>
     </main>
   </div>
 </template>
@@ -37,6 +38,8 @@ export default {
   watch: {
     list (newClass) {
       this.fid = newClass[0].id || 2
+      // 一级分类的名称
+      this.firstCateName = newClass[0].catename || '' // 一级分类名称
       // 找到第一个分类的二级分类
       this.secondCategory = newClass[0].children || []
       // console.log(this.secondCategory)
@@ -45,6 +48,7 @@ export default {
   data () {
     return {
       fid: 2, // 当前点击的一级分类的id
+      firstCateName: '', // 一级分类的名称
       secondCategory: []
     }
   },
@@ -54,6 +58,8 @@ export default {
     } else {
       // 给fid和secondCategory赋值
       this.fid = this.list[0].fid || 2
+      // 找到第一个一级分类名称
+      this.firstCateName = this.list[0].catename || '' // 一级分类名称
       // 找到第一个分类的二级分类
       this.secondCategory = this.list[0].children || []
     }
@@ -63,6 +69,9 @@ export default {
       this.fid = id
       // 找到对应的一级分类
       const classification = this.list.find(item => item.id === id)
+      // 获取对应的一级分类的名称
+      this.firstCateName = classification.catename
+      // 获取对应的二级分类
       this.secondCategory = classification.children || []
     }
   }

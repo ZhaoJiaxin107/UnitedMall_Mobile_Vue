@@ -20,6 +20,14 @@ export default {
     UHeader,
     USearch,
     UGoodsList
+  },
+  data () {
+    return {
+      title: ''
+    }
+  },
+  mounted () {
+    this.title = this.$route.params.name || '商品列表'
   }
 
 }
