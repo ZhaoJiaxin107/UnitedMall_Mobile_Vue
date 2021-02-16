@@ -4,7 +4,7 @@
     <!-- main -->
     <main>
       <!-- leftnav -->
-      <u-left-nav />
+      <u-left-nav :classification = "classification"/>
       <!-- rightlist -->
       <u-right-list />
     </main>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 import UHeader from '@/components/Header'
 import ULeftNav from './components/Leftnav'
 import URightList from './components/Rightlist'
@@ -20,6 +21,19 @@ export default {
     UHeader,
     ULeftNav,
     URightList
+  },
+  computed: {
+    ...mapState({
+      list: state => state.category.list // 所有的分类数据
+    }),
+    ...mapGetters({
+      classification: 'category/firstCategoryList' // 一级分类
+    })
+  },
+  mounted () {
+    if (this.list.length === 0) {
+      this.$store.dispatch('category/getCategoryList')
+    }
   }
 }
 </script>
