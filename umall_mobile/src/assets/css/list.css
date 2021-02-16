@@ -1,13 +1,12 @@
 @charset "utf-8";
 .wrap {
   width: calc(100% - 30px*2);
-  height: 0.9rem;
   margin: 0 auto;
   max-width: 750px;
 }
 .wrap header {
   width: 100%;
-  height: 100%;
+  height: .9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +53,7 @@
 .wrap .searchnav .search input::-webkit-input-placeholder {
   font-size: 0.27rem;
   color: #f0f1f3;
-}
+} 
 .wrap .listpanel .listitem {
   width: 100%;
   height: 2.05rem;
@@ -103,39 +102,5 @@
   font-size: 0.23rem;
   color: #9a9a9a;
 }
-.wrap .add {
-  width: 100%;
-  max-width: 750px;
-  height: 1.2rem;
-  margin: 0 auto;
-}
-.tabnav {
-  background-color: #ffffff;
-  width: 100%;
-  max-width: 750px;
-  height: 1.2rem;
-  border-top: 1px solid #ebebeb;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.tabnav a {
-  text-align: center;
-}
-.tabnav a i {
-  display: block;
-  font-size: 0.5rem;
-  color: #8a8a8a;
-}
-.tabnav a em {
-  font: 0.2rem/0.32rem "微软雅黑";
-  color: #878787;
-}
-.tabnav a:nth-of-type(1) i,
-.tabnav a:nth-of-type(1) em {
-  color: #ef6b16;
-}
+
+
