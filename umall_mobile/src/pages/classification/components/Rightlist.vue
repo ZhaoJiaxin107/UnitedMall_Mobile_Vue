@@ -1,7 +1,7 @@
 <template>
   <div class="rightlist">
     <!-- wash hair -->
-    <div class="washhair">
+    <div class="category">
       <!-- list -->
       <ul class="list">
         <li v-for = "item of list" :key = "item.id">

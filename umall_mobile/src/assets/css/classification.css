@@ -40,93 +40,34 @@ main .rightlist {
   width: 88%;
   height: 10.4rem;
 }
-main .rightlist .washhair {
+main .rightlist .category {
   width: 100%;
   height: 6.15rem;
 }
-main .rightlist .washhair .title {
-  width: calc(100% - 50px*2);
-  margin: 0 auto;
-  padding: 0.5rem 0 0.2rem 0;
-  display: flex;
-  justify-content: space-between;
-}
-main .rightlist .washhair .title h3 {
-  font-size: 0.27rem;
-  color: #464646;
-}
-main .rightlist .washhair .title .more {
-  font-size: 0.25rem;
-  color: #666666;
-}
-main .rightlist .washhair .list {
+
+main .rightlist .category .list {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
-main .rightlist .washhair .list li {
-  width: 33.3%;
+main .rightlist .category .list li {
+  width: 50%;
   height: 2rem;
   padding-top: 0.3rem;
 }
-main .rightlist .washhair .list li a {
+main .rightlist .category .list li a {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-main .rightlist .washhair .list li a img {
+main .rightlist .category .list li a img {
   display: block;
   width: 1.51rem;
   height: 1.51rem;
 }
-main .rightlist .washhair .list li a span {
-  font-size: 0.25rem;
-  color: #878787;
-}
-main .rightlist .dryhair {
-  width: 100%;
-  height: 4.25rem;
-}
-main .rightlist .dryhair .title {
-  width: calc(100% - 50px*2);
-  margin: 0 auto;
-  padding: 0.5rem 0 0.2rem 0;
-  display: flex;
-  justify-content: space-between;
-}
-main .rightlist .dryhair .title h3 {
-  font-size: 0.27rem;
-  color: #464646;
-}
-main .rightlist .dryhair .title .more {
-  font-size: 0.25rem;
-  color: #666666;
-}
-main .rightlist .dryhair .list {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-main .rightlist .dryhair .list li {
-  width: 33.3%;
-  height: 2rem;
-  padding-top: 0.3rem;
-}
-main .rightlist .dryhair .list li a {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-main .rightlist .dryhair .list li a img {
-  display: block;
-  width: 1.51rem;
-  height: 1.51rem;
-}
-main .rightlist .dryhair .list li a span {
+main .rightlist .category .list li a span {
   font-size: 0.25rem;
   color: #878787;
 }
