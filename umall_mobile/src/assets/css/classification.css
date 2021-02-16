@@ -26,12 +26,12 @@ main nav .leftnav li {
   line-height: 0.52rem;
   text-align: center;
 }
-main nav .leftnav li:hover {
+/* main nav .leftnav li:hover {
   border-left: 0.08rem solid #f26b11;
 }
 main nav .leftnav li:hover a {
   color: #f26b11;
-}
+} */
 main nav .leftnav li a {
   font-size: 0.3rem;
   color: #666666;
