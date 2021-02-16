@@ -2,12 +2,12 @@
 .headerbg {
   background-color: #f26b11;
 }
-.wrap {
+.wrapper {
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
 }
-.wrap header {
+.wrapper header {
   width: calc(100% - 30px*2);
   height: 0.9rem;
   margin: 0 auto;
@@ -15,19 +15,19 @@
   align-items: center;
   justify-content: space-between;
 }
-.wrap header a img {
+.wrapper header a img {
   width: 0.17rem;
   height: 0.28rem;
 }
-.wrap header h3 {
+.wrapper header h3 {
   font: 0.35rem/1 "微软雅黑";
   color: #fefcff;
 }
-.wrap header i {
+.wrapper header i {
   font-size: 0.55rem;
   color: #fefcff;
 }
-.wrap .avatarinfo {
+.wrapper .avatarinfo {
   width: calc(100% - 30px*2);
   height: 2.07rem;
   margin: 0 auto;
@@ -35,34 +35,34 @@
   align-items: center;
   justify-content: space-between;
 }
-.wrap .avatarinfo .avatar {
+.wrapper .avatarinfo .avatar {
   display: flex;
   align-items: center;
 }
-.wrap .avatarinfo .avatar img {
+.wrapper .avatarinfo .avatar img {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
   border: 0.06rem solid #822e02;
 }
-.wrap .avatarinfo .avatar .nameandlevel {
+.wrapper .avatarinfo .avatar .nameandlevel {
   margin-left: 0.2rem;
 }
-.wrap .avatarinfo .avatar .nameandlevel .name {
+.wrapper .avatarinfo .avatar .nameandlevel .name {
   font-size: 0.32rem;
   color: #ffffff;
 }
-.wrap .avatarinfo .avatar .nameandlevel .level {
+.wrapper .avatarinfo .avatar .nameandlevel .level {
   font-size: 0.2rem;
   color: #251404;
   font-style: italic;
   margin-top: 0.22rem;
 }
-.wrap .avatarinfo .sign {
+.wrapper .avatarinfo .sign {
   width: 1.6rem;
   height: 0.7rem;
 }
-.wrap .avatarinfo .sign button {
+.wrapper .avatarinfo .sign button {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -71,7 +71,7 @@
   color: #f26b11;
   cursor: pointer;
 }
-.wrap .sectionnav {
+.wrapper .sectionnav {
   width: calc(100% - 23px*2);
   max-width: 750px;
   height: 1.4rem;
@@ -80,17 +80,17 @@
   align-items: center;
   justify-content: space-around;
 }
-.wrap .sectionnav a img {
+.wrapper .sectionnav a img {
   display: block;
   width: 0.34rem;
   height: 0.34rem;
   margin: 0.16rem;
 }
-.wrap .sectionnav a em {
+.wrapper .sectionnav a em {
   font-size: 0.2rem;
   color: #616161;
 }
-.wrap .padding {
+.wrapper .padding {
   width: 100%;
   height: 0.2rem;
   background-color: #f1f1f1;
@@ -142,34 +142,4 @@ main .personalmanagement li:nth-of-type(2) .wrapmanage .rightarrow .extra {
   font-size: 0.2rem;
   color: #f26b11;
   padding-right: 0.44rem;
-}
-.tabnav {
-  background-color: #ffffff;
-  width: 100%;
-  max-width: 750px;
-  height: 1.2rem;
-  border-top: 1px solid #ebebeb;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.tabnav a {
-  text-align: center;
-}
-.tabnav a i {
-  display: block;
-  font-size: 0.5rem;
-  color: #8a8a8a;
-}
-.tabnav a em {
-  font: 0.2rem/0.32rem "微软雅黑";
-  color: #878787;
-}
-.tabnav a:nth-of-type(3) i,
-.tabnav a:nth-of-type(3) em {
-  color: #ef6b16;
 }
