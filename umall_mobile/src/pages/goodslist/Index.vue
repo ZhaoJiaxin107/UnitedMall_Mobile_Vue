@@ -2,7 +2,7 @@
    <!-- header -->
     <div class="wrap">
         <!-- top -->
-        <u-header />
+        <u-header @clearlist = "clearList"/>
         <!-- search -->
         <u-search />
         <!-- listpanel -->
@@ -37,6 +37,11 @@ export default {
     this.title = this.$route.params.name || '商品列表'
     this.cateId = parseInt(this.$route.params.id) // 接收路由参数
     this.$store.dispatch('goods/getGoodsList', { id: this.cateId })
+  },
+  methods: {
+    clearList () {
+      this.$store.dispatch('goods/getGoodsList', { id: 0 })
+    }
   }
 
 }
