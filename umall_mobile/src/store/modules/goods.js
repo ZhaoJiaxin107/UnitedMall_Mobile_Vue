@@ -1,4 +1,4 @@
-import { getIndexGoods } from '@/api/goods'
+import { getIndexGoods, getGoodsList } from '@/api/goods'
 // 首页商品数据默认值
 const defaultIndexList = {
   hot: [],
@@ -8,11 +8,15 @@ const defaultIndexList = {
 export default {
   namespaced: true,
   state: {
-    indexList: [...defaultIndexList] // 轮播图数据
+    indexList: [...defaultIndexList], // 轮播图数据
+    goodsList: [] // 商品列表数据
   },
   mutations: {
     SET_INDEX_LIST (state, list) {
       state.indexList = list
+    },
+    SET_GOODS_LIST (state, list) {
+      state.goodsList = list
     }
   },
   actions: {
@@ -26,6 +30,12 @@ export default {
           all: res[2].content || []
         }
         commit('SET_INDEX_LIST', list)
+      })
+    },
+    getGoodsList ({ commit }, payLoad) {
+      getGoodsList(payLoad.id).then(res => {
+        console.log(res)
+        commit('SET_GOODS_LIST', res)
       })
     }
   }

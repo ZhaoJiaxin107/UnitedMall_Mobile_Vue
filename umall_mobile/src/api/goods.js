@@ -9,3 +9,11 @@ export const getIndexGoods = (page = 1, size = 3) => {
 export const getGoodsTotal = () => {
   return http.get('/goodscount')
 }
+// 获取商品列表
+export const getGoodsList = (fid) => {
+  return http.get('/getgoods', {
+    params: {
+      fid
+    }
+  })
+}

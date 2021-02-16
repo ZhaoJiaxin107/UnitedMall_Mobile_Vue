@@ -24,7 +24,7 @@ export default {
     // 通过接口获取数据
     getCategoryList ({commit}) {
       getCategoryList().then(res => {
-        console.log(res)
+        // console.log(res)
         commit('SET_LIST', res)
       })
     }

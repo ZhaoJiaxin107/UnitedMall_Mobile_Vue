@@ -102,5 +102,11 @@
   font-size: 0.23rem;
   color: #9a9a9a;
 }
+.wrap .add {
+  width: 100%;
+  max-width: 750px;
+  height: 1.2rem;
+  margin: 0 auto;
+}
 
 
