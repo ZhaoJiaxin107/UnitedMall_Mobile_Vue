@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     changeFid (id) {
-      this.$emit('changeFid', id)
+      this.$emit('changeCate', id)
     }
   }
 }

@@ -2,87 +2,26 @@
   <div class="rightlist">
     <!-- wash hair -->
     <div class="washhair">
-      <!-- title -->
-      <div class="title">
-        <h3>洗发类</h3>
-        <a class="more" href="javascript:;">更多&gt;</a>
-      </div>
       <!-- list -->
       <ul class="list">
-        <li>
+        <li v-for = "item of list" :key = "item.id">
           <a>
-            <img src="/static/images/classify/1.jpg" alt="item" />
-            <span>护亮泽洗发水</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img src="/static/images/classify/2.jpg" alt="item" />
-            <span>滋养洗发水</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img src="/static/images/classify/3.jpg" alt="item" />
-            <span>柔顺洗发露</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img src="/static/images/classify/4.jpg" alt="item" />
-            <span>去屑洗发露</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/static/images/classify/5.jpg" alt="item" />
-            <span>柔顺洗发露</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/static/images/classify/6.jpg" alt="item" />
-            <span>焕彩洗发水</span>
+            <img v-if = "item.img !==''" :src="item.img | recombinationImg" alt="item" />
+            <span>{{item.catename}}</span>
           </a>
         </li>
       </ul>
     </div>
 
-    <!-- dry hair -->
-    <div class="dryhair">
-      <!-- title -->
-      <div class="title">
-        <h3>染发类</h3>
-        <a class="more" href="#">更多&gt;</a>
-      </div>
-
-      <!-- list -->
-      <ul class="list">
-        <li>
-          <a>
-            <img src="/static/images/classify/7.jpg" alt="item" />
-            <span>施华蔻染色</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img src="/static/images/classify/8.jpg" alt="item" />
-            <span>施华蔻双氧水</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img src="/static/images/classify/9.jpg" alt="item" />
-            <span>施华蔻染发膏</span>
-          </a>
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    list: Array
+  }
+}
 </script>
 
 <style scoped>

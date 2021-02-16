@@ -7,9 +7,10 @@
       <u-left-nav
       :classification = "classification"
       :fid = "fid"
-      @changeFid = "changeFid"/>
+      @changeCate = "changeCategory"/>
       <!-- rightlist -->
-      <u-right-list />
+      <u-right-list
+      :list = "secondCategory"/>
     </main>
   </div>
 </template>
@@ -34,8 +35,10 @@ export default {
     })
   },
   watch: {
-    classification (newClass) {
+    list (newClass) {
       this.fid = newClass[0].id || 2
+      // 找到第一个分类的二级分类
+      this.secondCategory = newClass[0].children || []
     }
   },
   data () {
@@ -50,8 +53,11 @@ export default {
     }
   },
   methods: {
-    changeFid (id) {
+    changeCategory (id) {
       this.fid = id
+      // 找到对应的一级分类
+      const classification = this.list.find(item => item.id === id)
+      this.secondCategory = classification.children || []
     }
   }
 }
