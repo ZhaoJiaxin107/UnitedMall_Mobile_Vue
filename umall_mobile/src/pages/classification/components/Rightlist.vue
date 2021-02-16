@@ -19,7 +19,9 @@
 <script>
 export default {
   props: {
-    list: Array
+    list: {
+      type: Array
+    }
   }
 }
 </script>

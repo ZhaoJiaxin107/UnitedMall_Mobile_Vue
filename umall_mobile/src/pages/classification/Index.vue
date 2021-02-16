@@ -39,17 +39,23 @@ export default {
       this.fid = newClass[0].id || 2
       // 找到第一个分类的二级分类
       this.secondCategory = newClass[0].children || []
+      // console.log(this.secondCategory)
     }
   },
   data () {
     return {
       fid: 2, // 当前点击的一级分类的id
-      secondCategory: [] // 二级分类
+      secondCategory: []
     }
   },
   mounted () {
     if (this.list.length === 0) {
       this.$store.dispatch('category/getCategoryList')
+    } else {
+      // 给fid和secondCategory赋值
+      this.fid = this.list[0].fid || 2
+      // 找到第一个分类的二级分类
+      this.secondCategory = this.list[0].children || []
     }
   },
   methods: {
