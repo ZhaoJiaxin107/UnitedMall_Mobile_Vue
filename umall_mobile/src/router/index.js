@@ -38,6 +38,13 @@ const router = new Router({
         title: '商品分类'
       },
       component: () => import('@/pages/classification/Index')
+    },
+    {
+      path: '/goodslist/:id',
+      meta: {
+        title: '商品列表'
+      },
+      component: () => import('@/pages/goodslist/Index')
     }
   ],
   mode: 'history'

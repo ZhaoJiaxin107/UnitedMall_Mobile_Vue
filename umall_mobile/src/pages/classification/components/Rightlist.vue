@@ -5,10 +5,10 @@
       <!-- list -->
       <ul class="list">
         <li v-for = "item of list" :key = "item.id">
-          <a>
+          <router-link :to = "'/goodslist/' + item.id">
             <img v-if = "item.img !==''" :src="item.img | recombinationImg" alt="item" />
             <span>{{item.catename}}</span>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
