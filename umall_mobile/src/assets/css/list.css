@@ -49,6 +49,7 @@
   width: 1.7rem;
   text-indent: 0.22rem;
   font-size: 0.27rem;
+  color: #f0f1f3;
 }
 .wrap .searchnav .search input::-webkit-input-placeholder {
   font-size: 0.27rem;

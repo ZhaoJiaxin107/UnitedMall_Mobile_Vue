@@ -57,6 +57,7 @@ export default {
           for (let i = 0; i < this.total; i++) {
             this.goodsList.push(res[i])
           }
+          console.log(this.goodsList)
           // 加载状态结束
           this.loading = false
           // 数据全部加载完成
