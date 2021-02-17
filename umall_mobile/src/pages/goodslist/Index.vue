@@ -4,14 +4,14 @@
         <!-- top -->
         <u-header @clearlist = "clearList"/>
         <!-- search -->
-        <u-search />
+        <u-search @search = "searchKeyword"/>
         <!-- listpanel -->
         <van-list
         v-model="loading"
         :finished="finished"
         finished-text="没有更多了"
         @load="onLoad">
-          <u-goods-list :goodsList = "goodsList"/>
+          <u-goods-list :goodsList = "searchList"/>
         </van-list>
         <div class="add"></div>
     </div>
@@ -36,6 +36,7 @@ export default {
       cateId: 0, // 当前分类id
       loading: false, // 是否正在加载
       goodsList: [], // 商品列表数据
+      searchList: [], // 搜索列表数据
       finished: false, // 是否结束加载(没有更多数据了)
       total: 0 // 加载的商品数量
     }
@@ -46,6 +47,7 @@ export default {
   },
   methods: {
     clearList () {
+      this.searchList = []
       this.goodsList = []
       this.total = 0
     },
@@ -57,7 +59,8 @@ export default {
           for (let i = 0; i < this.total; i++) {
             this.goodsList.push(res[i])
           }
-          console.log(this.goodsList)
+          this.searchList = [...this.goodsList]
+          // console.log(this.searchList)
           // 加载状态结束
           this.loading = false
           // 数据全部加载完成
@@ -68,6 +71,17 @@ export default {
           console.log(err)
         })
       }, 1000)
+    },
+    searchKeyword (keyword) {
+      // console.log(keyword)
+      keyword = keyword.toLowerCase()
+      // 筛选searchList
+      this.searchList = this.goodsList.filter(item => {
+        if (item.goodsname.toLowerCase().indexOf(keyword) !== -1) {
+          return item
+        }
+      })
+      // console.log(this.searchList)
     }
   }
 }
