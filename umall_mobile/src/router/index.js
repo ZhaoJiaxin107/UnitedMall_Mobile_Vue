@@ -50,10 +50,26 @@ const router = new Router({
   mode: 'history'
 })
 
-// 拦截
-// router.beforeEach((to, from, next) => {
-//   // 设置页面标题
-//   document.title = to.meta.title || 'United Mall(U.MOBILE.COM)'
-// })
+// 拦截, 创建导航守卫
+router.beforeEach((to, from, next) => {
+  // 设置页面标题
+  document.title = to.meta.title || 'United Mall(U.MOBILE.COM)'
+  // 获取是否需要进行登录
+  const checkLogin = to.meta.checkLogin || false
+  if (checkLogin) {
+    // 需要验证登录
+    const userInfo = sessionStorage.getItem('user')
+    if (!userInfo) {
+      // 没有登录
+      next('/login')
+    } else {
+      // 已经登录
+      next()
+    }
+  } else {
+    // 不需要验证登录
+    next()
+  }
+})
 
 export default router

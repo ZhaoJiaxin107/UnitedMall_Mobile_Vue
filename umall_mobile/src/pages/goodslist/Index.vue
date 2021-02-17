@@ -9,7 +9,7 @@
         <van-list
         v-model="loading"
         :finished="finished"
-        finished-text="Finished"
+        finished-text="没有更多了"
         @load="onLoad">
           <u-goods-list :goodsList = "goodsList"/>
         </van-list>
@@ -32,10 +32,10 @@ export default {
   },
   data () {
     return {
-      goodsList: [],
       title: '',
       cateId: 0, // 当前分类id
       loading: false, // 是否正在加载
+      goodsList: [], // 商品列表数据
       finished: false, // 是否结束加载(没有更多数据了)
       total: 0 // 加载的商品数量
     }
