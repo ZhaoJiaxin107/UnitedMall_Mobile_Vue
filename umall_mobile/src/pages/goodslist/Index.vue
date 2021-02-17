@@ -53,8 +53,10 @@ export default {
       // console.log('onLoad')
       setTimeout(() => {
         getGoodsList(this.cateId).then(res => {
-          this.goodsList = res
           this.total = res.length
+          for (let i = 0; i < this.total; i++) {
+            this.goodsList.push(res[i])
+          }
           // 加载状态结束
           this.loading = false
           // 数据全部加载完成
