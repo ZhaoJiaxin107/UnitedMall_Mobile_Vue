@@ -34,7 +34,7 @@ export default {
     },
     getGoodsList ({ commit }, payLoad) {
       getGoodsList(payLoad.id).then(res => {
-        console.log(res)
+        // console.log(res)
         commit('SET_GOODS_LIST', res)
       })
     }

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { getGoodsList } from '@/api/goods'
 import { List } from 'vant'
 import UHeader from './components/Header'
 import USearch from './components/Search'
@@ -30,33 +30,41 @@ export default {
     UGoodsList,
     VanList: List
   },
-  computed: {
-    ...mapState({
-      goodsList: state => state.goods.goodsList
-    })
-  },
   data () {
     return {
+      goodsList: [],
       title: '',
       cateId: 0, // 当前分类id
       loading: false, // 是否正在加载
-      finished: false // 是否结束加载(没有更多数据了)
+      finished: false, // 是否结束加载(没有更多数据了)
+      total: 0 // 加载的商品数量
     }
   },
   mounted () {
     this.title = this.$route.params.name || '商品列表'
     this.cateId = parseInt(this.$route.params.id) // 接收路由参数
-    this.$store.dispatch('goods/getGoodsList', { id: this.cateId })
   },
   methods: {
     clearList () {
-      this.$store.dispatch('goods/getGoodsList', { id: 0 })
+      this.goodsList = []
+      this.total = 0
     },
     onLoad () {
-      console.log('onLoad')
+      // console.log('onLoad')
+      setTimeout(() => {
+        getGoodsList(this.cateId).then(res => {
+          this.goodsList = res
+          this.total = res.length
+          // 加载状态结束
+          this.loading = false
+          // 数据全部加载完成
+          if (this.goodsList.length >= this.total) {
+            this.finished = true
+          }
+        })
+      }, 1000)
     }
   }
-
 }
 </script>
 
