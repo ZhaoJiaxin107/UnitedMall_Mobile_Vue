@@ -6,13 +6,20 @@
         <!-- search -->
         <u-search />
         <!-- listpanel -->
-        <u-goods-list :goodsList = "goodsList"/>
+        <van-list
+        v-model="loading"
+        :finished="finished"
+        finished-text="Finished"
+        @load="onLoad">
+          <u-goods-list :goodsList = "goodsList"/>
+        </van-list>
         <div class="add"></div>
     </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import { List } from 'vant'
 import UHeader from './components/Header'
 import USearch from './components/Search'
 import UGoodsList from './components/Goodslist'
@@ -20,7 +27,8 @@ export default {
   components: {
     UHeader,
     USearch,
-    UGoodsList
+    UGoodsList,
+    VanList: List
   },
   computed: {
     ...mapState({
@@ -30,7 +38,9 @@ export default {
   data () {
     return {
       title: '',
-      cateId: 0 // 当前分类id
+      cateId: 0, // 当前分类id
+      loading: false, // 是否正在加载
+      finished: false // 是否结束加载(没有更多数据了)
     }
   },
   mounted () {
@@ -41,6 +51,9 @@ export default {
   methods: {
     clearList () {
       this.$store.dispatch('goods/getGoodsList', { id: 0 })
+    },
+    onLoad () {
+      console.log('onLoad')
     }
   }
 
