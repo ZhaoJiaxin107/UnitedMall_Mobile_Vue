@@ -63,6 +63,8 @@ export default {
           if (this.goodsList.length >= this.total) {
             this.finished = true
           }
+        }).catch(err => {
+          console.log(err)
         })
       }, 1000)
     }
