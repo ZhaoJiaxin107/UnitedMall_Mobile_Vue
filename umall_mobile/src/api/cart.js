@@ -11,3 +11,15 @@ export const addCart = (uid, goodsid, num) => {
     num
   })
 }
+
+// 购物车列表
+export const getCartList = (uid) => {
+  if (!uid) {
+    return Promise.reject(new Error('参数不完整'))
+  }
+  return http.get('/cartlist', {
+    params: {
+      uid
+    }
+  })
+}

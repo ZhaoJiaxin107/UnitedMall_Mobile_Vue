@@ -8,6 +8,7 @@ const { getTree } = require("../utils");
 //购物车列表
 router.get("/cartlist", async (req, res) => {
     const { uid } = req['query'];
+	console.log(uid)
     if(!uid){
     	res.send(MError("缺少必要条件"));
     	return;

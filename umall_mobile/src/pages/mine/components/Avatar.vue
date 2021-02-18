@@ -4,7 +4,7 @@
       <img src="/static/images/mine/jiaxin.jpg" alt="avatar" />
       <!-- name -->
       <div class="nameandlevel">
-        <p class="name">夹心</p>
+        <p class="name">{{nickname}}</p>
         <p class="level">V3</p>
       </div>
     </div>
@@ -15,7 +15,17 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      nickname: ''
+    }
+  },
+  mounted () {
+    let userInfo = JSON.parse(sessionStorage.getItem('user'))
+    this.nickname = userInfo.nickname
+  }
+}
 </script>
 
 <style>
