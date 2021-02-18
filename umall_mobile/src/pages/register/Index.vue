@@ -32,6 +32,8 @@
         round block color = "#f26b11"
         type="info" native-type="submit"
         :loading = "loading"
+        loading-text="注册中"
+        :disabled = "disabled"
         >
           注册
         </van-button>
@@ -39,7 +41,7 @@
     </van-form>
     <div class = "toregister">
       没有账号，去
-      <router-link to = "/login">注册</router-link>
+      <router-link to = "/login">登录</router-link>
     </div>
   </div>
 </template>
@@ -64,7 +66,8 @@ export default {
         { required: true, message: '请填写手机号' },
         { pattern: /^1[3-9]\d{9}$/, message: '请填写正确的手机号' }
       ],
-      loading: false
+      loading: false, // 注册按钮是否显示加载中
+      disabled: false // 注册按钮是否禁用
     }
   },
   mounted () {
@@ -77,6 +80,8 @@ export default {
     onSubmit () {
       // 加载
       this.loading = true
+      // 提交按钮禁用, 防止重复点击
+      this.disabled = true
       // 数据的提交，即会员注册
       register(this.phone, this.nickname, this.password).then(() => {
         // 注册成功
@@ -85,6 +90,11 @@ export default {
         this.$router.push('/login')
       }).catch(err => {
         Toast.fail(err.message)
+      }).finally(() => {
+        // 不再显示加载中
+        this.loading = false
+        // 恢复按钮禁用状态
+        this.disabled = true
       })
     }
   },
