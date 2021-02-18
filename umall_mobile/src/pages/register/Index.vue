@@ -7,6 +7,7 @@
         name="phone"
         label="手机号"
         placeholder="请输入手机号"
+        autocomplete = "off"
         :rules="phoneRules"
       />
       <van-field
@@ -14,6 +15,7 @@
         name="nickname"
         label="昵称"
         placeholder="请输入昵称"
+        autocomplete = "off"
         :rules="[{ required: true, message: '请填写昵称' }]"
       />
       <van-field
@@ -22,23 +24,29 @@
         name="Password"
         label="密码"
         placeholder="请输入密码"
+        autocomplete = "off"
         :rules="[{ required: true, message: '请填写密码' }]"
       />
       <div style="margin: 16px">
-        <van-button round block color = "#f26b11" type="info" native-type="submit">
-          登录
+        <van-button
+        round block color = "#f26b11"
+        type="info" native-type="submit"
+        :loading = "loading"
+        >
+          注册
         </van-button>
       </div>
     </van-form>
     <div class = "toregister">
       没有账号，去
-      <router-link to = "/login">登录</router-link>
+      <router-link to = "/login">注册</router-link>
     </div>
   </div>
 </template>
 
 <script>
-import { Form, Field, Button } from 'vant'
+import { Form, Field, Button, Toast } from 'vant'
+import { register } from '@/api/member'
 import UHeader from '@/components/Header'
 export default {
   components: {
@@ -54,7 +62,9 @@ export default {
       password: '',
       phoneRules: [
         { required: true, message: '请填写手机号' },
-        { pattern: /^1[3-9]\d{9}$/, message: '请填写正确的手机号' }]
+        { pattern: /^1[3-9]\d{9}$/, message: '请填写正确的手机号' }
+      ],
+      loading: false
     }
   },
   mounted () {
@@ -65,7 +75,17 @@ export default {
   },
   methods: {
     onSubmit () {
-      console.log('on submit')
+      // 加载
+      this.loading = true
+      // 数据的提交，即会员注册
+      register(this.phone, this.nickname, this.password).then(() => {
+        // 注册成功
+        Toast.success('注册成功')
+        // 跳转至登录页面
+        this.$router.push('/login')
+      }).catch(err => {
+        Toast.fail(err.message)
+      })
     }
   },
   beforeRouteLeave (to, from, next) {
