@@ -3,7 +3,7 @@
     <van-swipe-cell
     v-for="item of cartList"
     :key="item.id">
-      <van-checkbox checked-color="#ee0a24"></van-checkbox>
+       <van-checkbox checked-color="#ee0a24" :name = "item.id" button-size="18"></van-checkbox>
       <van-card
         :price="item.market_price"
         :origin-price = "item.price"
@@ -11,6 +11,7 @@
         class="goods-card"
         :thumb="item.img | recombinationImg"
       />
+      <van-stepper v-model.number="item.num" :name = "item.id" theme="round" integer />
       <template #right>
         <van-button square text="删除" type="danger" class="delete-button" />
       </template>
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-import { CheckboxGroup, SwipeCell, Card, Button, Checkbox } from 'vant'
+import { CheckboxGroup, SwipeCell, Card, Button, Checkbox, Stepper } from 'vant'
 export default {
   props: {
     cartList: Array
@@ -29,12 +30,14 @@ export default {
     VanSwipeCell: SwipeCell,
     VanCard: Card,
     VanButton: Button,
-    VanCheckbox: Checkbox
+    VanCheckbox: Checkbox,
+    VanStepper: Stepper
   },
   data () {
     return {
       checkedGroup: [],
-      checked: true
+      checked: true,
+      numberList: []
     }
   }
 }
@@ -73,5 +76,10 @@ export default {
   top: 50%;
   margin-top: translateY(-50%);
   z-index: 2;
+}
+.van-stepper{
+  position: absolute;
+  right: .2rem;
+  bottom: .2rem;
 }
 </style>
