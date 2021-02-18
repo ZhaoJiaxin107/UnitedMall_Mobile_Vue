@@ -3,9 +3,10 @@
     <van-swipe-cell
     v-for="item of cartList"
     :key="item.id">
+      <van-checkbox checked-color="#ee0a24"></van-checkbox>
       <van-card
-        :price="item.price"
-        desc="描述信息"
+        :price="item.market_price"
+        :origin-price = "item.price"
         :title="item.goodsname"
         class="goods-card"
         :thumb="item.img | recombinationImg"
@@ -18,44 +19,59 @@
 </template>
 
 <script>
-import { checkboxGroup, SwipeCell, Card, Button } from 'vant'
+import { CheckboxGroup, SwipeCell, Card, Button, Checkbox } from 'vant'
 export default {
   props: {
     cartList: Array
   },
   components: {
-    VanCheckboxGroup: checkboxGroup,
+    VanCheckboxGroup: CheckboxGroup,
     VanSwipeCell: SwipeCell,
     VanCard: Card,
-    VanButton: Button
+    VanButton: Button,
+    VanCheckbox: Checkbox
   },
   data () {
     return {
-      checkedGroup: []
+      checkedGroup: [],
+      checked: true
     }
   }
 }
 </script>
 
 <style scoped>
+.van-swipe-cell{
+  position: relative;
+}
 .goods-card {
-  margin: .1rem;
+  margin: .1rem .3rem;
   background-color: #ffffff;
 }
 
 .delete-button {
-    height: 100%;
+  height: 100%;
+}
+.van-card__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .van-card__title{
-  font-size: 0.25rem;
-  color: #333333;
-}
-.van-card__desc{
-  margin-top: .2rem;
-  font-size: 0.22rem;
+  font-size: 0.28rem;
   color: #333333;
 }
 .van-card__price{
   color: #e5383c;
+}
+.van-card__origin-price{
+   font-size: 0.23rem;
+}
+.van-checkbox{
+  position: absolute;
+  left: .1rem;
+  top: 50%;
+  margin-top: translateY(-50%);
+  z-index: 2;
 }
 </style>

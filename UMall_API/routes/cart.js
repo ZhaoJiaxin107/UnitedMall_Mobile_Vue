@@ -13,7 +13,7 @@ router.get("/cartlist", async (req, res) => {
     	res.send(MError("缺少必要条件"));
     	return;
     }
-    let data = await Db.select(req, `SELECT a.*,b.goodsname,b.price,b.img FROM ${tableName} a LEFT JOIN ${tableNameGoods} b ON a.goodsid = b.id WHERE a.uid = '${uid}'`);
+    let data = await Db.select(req, `SELECT a.*,b.* FROM ${tableName} a LEFT JOIN ${tableNameGoods} b ON a.goodsid = b.id WHERE a.uid = '${uid}'`);
     res.send(Success(data));
 });
 //添加购物车

@@ -20,6 +20,7 @@ export default {
     })
   },
   mounted () {
+    // 重新获取购物车数据
     if (this.cartList.length === 0) {
       this.$store.dispatch('cart/getCartList')
     }
