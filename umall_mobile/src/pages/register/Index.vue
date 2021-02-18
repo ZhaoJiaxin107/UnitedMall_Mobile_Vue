@@ -7,7 +7,7 @@
         name="phone"
         label="手机号"
         placeholder="请输入手机号"
-        :rules="[{ required: true, message: '请填写手机号' }]"
+        :rules="phoneRules"
       />
       <van-field
         v-model="nickname"
@@ -51,7 +51,10 @@ export default {
     return {
       phone: '',
       nickname: '',
-      password: ''
+      password: '',
+      phoneRules: [
+        { required: true, message: '请填写手机号' },
+        { pattern: /^1[3-9]\d{9}$/, message: '请填写正确的手机号' }]
     }
   },
   mounted () {
