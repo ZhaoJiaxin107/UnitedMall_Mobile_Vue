@@ -1,5 +1,5 @@
 <template>
-  <div class="tabnav">
+  <div class="tabnav" id = "tabbar">
     <router-link to ="/" exact-active-class="active">
       <i class="iconfont">&#xe600;</i>
       <em>首页</em>
