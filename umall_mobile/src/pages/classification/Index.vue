@@ -19,8 +19,8 @@
 <script>
 import { mapState, mapGetters } from 'vuex'
 import UHeader from '@/components/Header'
-import ULeftNav from './components/Leftnav'
-import URightList from './components/Rightlist'
+import ULeftNav from './components/LeftNav'
+import URightList from './components/RightList'
 export default {
   components: {
     UHeader,

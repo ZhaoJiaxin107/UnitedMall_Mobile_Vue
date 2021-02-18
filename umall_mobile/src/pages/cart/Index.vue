@@ -1,21 +1,26 @@
 <template>
-  <u-header title = "购物车"/>
+  <div>
+    <u-header title="购物车" />
+    <u-cart-list :cartList = "cartList"/>
+  </div>
 </template>
 
 <script>
-import UHeader from '@/components/Header'
 import { mapState } from 'vuex'
+import UHeader from '@/components/Header'
+import UCartList from './components/CartList'
 export default {
   components: {
-    UHeader
+    UHeader,
+    UCartList
   },
   computed: {
     ...mapState({
-      list: state => state.cart.list
+      cartList: (state) => state.cart.list
     })
   },
   mounted () {
-    if (this.list.length === 0) {
+    if (this.cartList.length === 0) {
       this.$store.dispatch('cart/getCartList')
     }
   }
@@ -23,5 +28,4 @@ export default {
 </script>
 
 <style>
-
 </style>
