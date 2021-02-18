@@ -80,7 +80,7 @@ export default {
     onSubmit () {
       // 加载
       this.loading = true
-      // 提交按钮禁用, 防止重复点击
+      // 注册按钮禁用, 防止重复点击
       this.disabled = true
       // 数据的提交，即会员注册
       register(this.phone, this.nickname, this.password).then(() => {
@@ -94,7 +94,7 @@ export default {
         // 不再显示加载中
         this.loading = false
         // 恢复按钮禁用状态
-        this.disabled = true
+        this.disabled = false
       })
     }
   },
