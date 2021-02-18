@@ -17,6 +17,13 @@ const router = new Router({
       component: () => import('@/pages/login/Index')
     },
     {
+      path: '/register',
+      meta: {
+        title: '用户注册'
+      },
+      component: () => import('@/pages/register/Index')
+    },
+    {
       path: '/cart',
       meta: {
         title: '购物车',

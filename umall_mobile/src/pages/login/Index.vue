@@ -4,15 +4,15 @@
     <van-form @submit="onSubmit" style="margin: 16px">
       <van-field
         v-model="phone"
-        name="Phone"
+        name="phone"
         label="手机号"
         placeholder="请输入手机号"
-        :rules="[{ required: true, message: '请填写用户名' }]"
+        :rules="[{ required: true, message: '请填写手机号' }]"
       />
       <van-field
         v-model="password"
         type="password"
-        name="Password"
+        name="password"
         label="密码"
         placeholder="请输入密码"
         :rules="[{ required: true, message: '请填写密码' }]"
@@ -25,7 +25,7 @@
     </van-form>
     <div class = "toregister">
       没有账号，去
-      <a>注册</a>
+      <router-link to = "/register">注册</router-link>
     </div>
   </div>
 </template>
