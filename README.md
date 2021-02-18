@@ -60,3 +60,6 @@ npm run dev
 
 #### 6.购物车页面
 
+* Vant组件Checkbox, SwipeCell, Stepper渲染购物车页面
+* 
+

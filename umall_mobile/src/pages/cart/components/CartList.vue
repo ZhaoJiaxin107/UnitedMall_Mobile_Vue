@@ -48,7 +48,7 @@ export default {
   position: relative;
 }
 .goods-card {
-  margin: .1rem .3rem;
+  margin:0 0 .1rem .3rem;
   background-color: #ffffff;
 }
 
