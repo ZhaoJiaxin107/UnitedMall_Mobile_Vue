@@ -1,8 +1,11 @@
 <template>
   <div>
     <u-header title="购物车" />
-    <u-cart-list :cartList = "cartList" @delete = "deleteItem"/>
-    <u-check />
+    <u-cart-list
+    :cartList = "cartList"
+    @delete = "deleteItem"
+    :length = "this.cartList.length"/>
+
     <div class = "addpadding"></div>
   </div>
 </template>
@@ -13,12 +16,10 @@ import { Toast } from 'vant'
 import { deleteCart } from '@/api/cart'
 import UHeader from '@/components/Header'
 import UCartList from './components/CartList'
-import UCheck from './components/Check'
 export default {
   components: {
     UHeader,
-    UCartList,
-    UCheck
+    UCartList
   },
   computed: {
     ...mapState({

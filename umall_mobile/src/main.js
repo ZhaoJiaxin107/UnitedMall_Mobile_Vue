@@ -10,7 +10,8 @@ import './assets/css/reset.css'
 import './filters/goods'
 // 引入全局mixin
 import './mixin/cart'
-
+// 创建通信总线
+Vue.prototype.bus = new Vue()
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
