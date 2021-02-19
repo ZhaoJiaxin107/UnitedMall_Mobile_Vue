@@ -3,7 +3,7 @@
     <van-swipe-cell
     v-for="item of cartList"
     :key="item.id">
-       <van-checkbox checked-color="#ee0a24" :name = "item.id" button-size="18"></van-checkbox>
+       <van-checkbox checked-color="#ee0a24" :name = "item.id" button-size="18" @click = "changeStatus"></van-checkbox>
       <van-card
         :price="item.market_price"
         :origin-price = "item.price"
@@ -35,9 +35,12 @@ export default {
   },
   data () {
     return {
-      checkedGroup: [],
-      checked: true,
-      numberList: []
+      checkedGroup: []
+    }
+  },
+  methods: {
+    changeStatus () {
+      console.log(this.checkedGroup)
     }
   }
 }

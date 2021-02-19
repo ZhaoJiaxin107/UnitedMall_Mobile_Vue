@@ -2,6 +2,7 @@
   <div>
     <u-header title="购物车" />
     <u-cart-list :cartList = "cartList"/>
+    <u-check />
   </div>
 </template>
 
@@ -9,10 +10,12 @@
 import { mapState } from 'vuex'
 import UHeader from '@/components/Header'
 import UCartList from './components/CartList'
+import UCheck from './components/Check'
 export default {
   components: {
     UHeader,
-    UCartList
+    UCartList,
+    UCheck
   },
   computed: {
     ...mapState({
