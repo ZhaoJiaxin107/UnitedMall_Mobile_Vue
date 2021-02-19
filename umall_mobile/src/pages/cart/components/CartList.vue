@@ -64,10 +64,23 @@ export default {
     VanCheckbox: Checkbox,
     VanStepper: Stepper
   },
+  computed: {
+    isAllChecked: {
+      get () {
+        if (this.checkedGroup.length === this.length && this.length > 0) {
+          return true
+        } else {
+          return false
+        }
+      },
+      set (value) {
+        // console.log(value)
+      }
+    }
+  },
   data () {
     return {
-      checkedGroup: [],
-      isAllChecked: false // 全选状态
+      checkedGroup: []
     }
   },
   methods: {
