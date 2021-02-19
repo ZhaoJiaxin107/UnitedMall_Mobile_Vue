@@ -4,7 +4,7 @@
     <u-cart-list
     :cartList = "cartList"
     @delete = "deleteItem"
-    :length = "this.cartList.length"/>
+    :length = "cartList.length"/>
 
     <div class = "addpadding"></div>
   </div>

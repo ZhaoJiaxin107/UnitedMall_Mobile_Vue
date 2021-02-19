@@ -35,8 +35,8 @@
       </van-col>
       <van-col span="8" class = "price">
         <!-- 总价格部分 -->
-        总计：<strong>&nbsp;&nbsp;￥110.00</strong>
-        <span>不含运费，已优惠￥13.00</span>
+        总计：<strong>&nbsp;&nbsp;￥{{total}}</strong><br>
+        <span>不含运费，已优惠￥{{discount}}</span>
       </van-col>
       <van-col span="8">
         <!-- 结算按钮 -->
@@ -74,8 +74,34 @@ export default {
         }
       },
       set (value) {
-        // console.log(value)
+        console.log(value)
       }
+    },
+    total () {
+      let sum = 0
+      for (let goods of this.cartList) {
+        if (this.checkedGroup.find(item => {
+          return item === goods.goodsid
+        })) {
+          sum += goods.num * goods.market_price
+        } else {
+          continue
+        }
+      }
+      return sum
+    },
+    discount () {
+      let discount = 0
+      for (let goods of this.cartList) {
+        if (this.checkedGroup.find(item => {
+          return item === goods.goodsid
+        })) {
+          discount += parseFloat(goods.price - goods.market_price) * goods.num
+        } else {
+          continue
+        }
+      }
+      return discount
     }
   },
   data () {
