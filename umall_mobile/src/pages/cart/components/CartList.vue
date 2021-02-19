@@ -1,6 +1,6 @@
 <template>
 <div>
-  <van-checkbox-group v-model="checkedGroup" ref ="checkboxGroup">
+  <van-checkbox-group v-model="checkedGroup" id = "checkboxGroup" ref ="checkboxGroup">
     <van-swipe-cell
     v-for="item of cartList"
     :key="item.id">
@@ -75,7 +75,19 @@ export default {
       this.$emit('delete', id)
     },
     checkAll () {
-
+      if (this.checkedGroup.length > 0) {
+        // 有商品卡片选中
+        if (this.checkedGroup.length === this.length) {
+          // 令所有的选中反选, 即全不选
+          this.$refs.checkboxGroup.toggleAll(false)
+        } else {
+          // 部分选中, 令所有的商品全部选中
+          this.$refs.checkboxGroup.toggleAll(true)
+        }
+      } else {
+        // 没有商品卡片选中，直接全选
+        this.$refs.checkboxGroup.toggleAll(true)
+      }
     }
   }
 }
