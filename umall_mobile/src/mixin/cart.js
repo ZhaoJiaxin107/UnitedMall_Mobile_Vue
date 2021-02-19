@@ -20,6 +20,8 @@ Vue.mixin({
       // 添加购物车
       addCart(userInfo.uid, goodsId, purchaseNum).then(() => {
         Toast.success('添加成功')
+        // 刷新购物车数据
+        this.$store.dispatch('cart/getCartList')
       }).catch(err => {
         Toast.fail(err.message)
       })

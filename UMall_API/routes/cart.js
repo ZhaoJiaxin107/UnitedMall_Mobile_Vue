@@ -54,7 +54,7 @@ router.post("/cartdelete", async (req, res) => {
     if (!id) {
         res.send(MError("缺少必要条件"));
     } else {
-        const result = await Db.delete(req, `DELETE FROM ${tableName} WHERE id = '${id}'`);
+        const result = await Db.delete(req, `DELETE FROM ${tableName} WHERE goodsid = '${id}'`);
         if(result === true){
             res.send(Success([],"删除成功"))
         }else{

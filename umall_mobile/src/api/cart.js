@@ -23,3 +23,8 @@ export const getCartList = (uid) => {
     }
   })
 }
+
+// 删除购物车
+export const deleteCart = (id) => {
+  return http.post('/cartdelete', { id })
+}

@@ -49,6 +49,7 @@ export default {
 
 <style scoped>
 .check {
+  background: #ffffff;
   width: 100%;
   height: 1.2rem;
   max-width: 750px;

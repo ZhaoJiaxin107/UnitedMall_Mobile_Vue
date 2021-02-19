@@ -13,7 +13,7 @@
       />
       <van-stepper v-model.number="item.num" :name = "item.id" theme="round" integer />
       <template #right>
-        <van-button square text="删除" type="danger" class="delete-button" />
+        <van-button square text="删除" type="danger" class="delete-button" @click="deleteItem(item.id)"/>
       </template>
     </van-swipe-cell>
   </van-checkbox-group>
@@ -39,6 +39,9 @@ export default {
     }
   },
   methods: {
+    deleteItem (id) {
+      this.$emit('delete', id)
+    },
     changeStatus () {
       console.log(this.checkedGroup)
     }
