@@ -32,6 +32,14 @@ const router = new Router({
       component: () => import('@/pages/cart/Index')
     },
     {
+      path: '/confirm',
+      meta: {
+        title: '确认订单',
+        checkLogin: true // 是否需要进行登录的判断
+      },
+      component: () => import('@/pages/confirm/Index')
+    },
+    {
       path: '/mine',
       meta: {
         title: '我的',

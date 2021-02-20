@@ -40,7 +40,7 @@
       </van-col>
       <van-col span="8">
         <!-- 结算按钮 -->
-        <van-button square color="#f26b11">去结算({{length}}件)</van-button>
+        <van-button square color="#f26b11" to = "/confirm">去结算({{length}}件)</van-button>
       </van-col>
     </van-row>
   </div>
