@@ -74,7 +74,7 @@ export default {
         }
       },
       set (value) {
-        console.log(value)
+        // console.log(value)
       }
     },
     total () {
