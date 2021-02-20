@@ -35,7 +35,7 @@
       </van-col>
       <van-col span="8" class = "price">
         <!-- 总价格部分 -->
-        总计：<strong>&nbsp;&nbsp;￥{{total}}</strong><br>
+        总计：<strong>￥{{total}}</strong><br>
         <span>不含运费，已优惠￥{{discount}}</span>
       </van-col>
       <van-col span="8">
@@ -88,7 +88,7 @@ export default {
           continue
         }
       }
-      return sum
+      return sum.toFixed(2)
     },
     discount () {
       let discount = 0
