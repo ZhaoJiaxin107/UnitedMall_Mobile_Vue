@@ -7,7 +7,10 @@
     <div class="padding"></div>
 
     <!-- order list -->
-    <u-order-list :orderList = "orderList"/>
+    <u-order-list
+    :orderList = "orderList"
+    @reduce = "reduceNum"
+    @add = "addNum"/>
     <!-- padding -->
     <div class="padding"></div>
 
@@ -17,7 +20,7 @@
     <div class="padding"></div>
 
     <!-- fee -->
-    <u-fee />
+    <u-fee  :orderList = "orderList"/>
   </div>
 </template>
 
@@ -45,6 +48,16 @@ export default {
     // 重新获取订单数据
     if (this.orderList.length === 0) {
       this.$store.dispatch('cart/getCartList')
+    }
+  },
+  methods: {
+    addNum (id) {
+      const order = this.orderList.find((item) => item.goodsid === id)
+      order.num++
+    },
+    reduceNum (id) {
+      const order = this.orderList.find((item) => item.goodsid === id)
+      if (order.num > 1) order.num--
     }
   }
 }
