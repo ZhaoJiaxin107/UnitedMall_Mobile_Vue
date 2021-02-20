@@ -20,7 +20,11 @@
     <div class="padding"></div>
 
     <!-- fee -->
-    <u-fee  :orderList = "orderList"/>
+    <u-fee
+    :orderList = "orderList"
+    :carryFee = "carryFee"
+    :coupon = "coupon"
+    :integral = "integral"/>
   </div>
 </template>
 
@@ -48,6 +52,13 @@ export default {
     // 重新获取订单数据
     if (this.orderList.length === 0) {
       this.$store.dispatch('cart/getCartList')
+    }
+  },
+  data () {
+    return {
+      carryFee: 10, // 运费
+      coupon: 0, // 优惠券
+      integral: 50 // 积分
     }
   },
   methods: {

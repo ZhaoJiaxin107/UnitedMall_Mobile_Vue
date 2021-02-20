@@ -33,7 +33,10 @@
 <script>
 export default {
   props: {
-    orderList: Array
+    orderList: Array,
+    carryFee: Number, // 运费
+    coupon: Number, // 优惠券
+    integral: Number// 积分
   },
   computed: {
     orginPrice () {
@@ -53,13 +56,6 @@ export default {
     actualPrice () {
       let actualTotal = this.orginPrice + this.carryFee - this.coupon - this.discountPrice - this.integral
       return actualTotal.toFixed(2)
-    }
-  },
-  data () {
-    return {
-      carryFee: 10,
-      coupon: 0, // 优惠券
-      integral: 50 // 积分
     }
   }
 
