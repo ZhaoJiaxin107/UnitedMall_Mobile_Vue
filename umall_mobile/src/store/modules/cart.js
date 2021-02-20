@@ -15,7 +15,7 @@ export default {
       let userInfo = JSON.parse(sessionStorage.getItem('user'))
       let uid = userInfo.uid
       getCartList(uid).then(res => {
-        console.log(res)
+        // console.log(res)
         commit('SET_LIST', res)
       })
     }
