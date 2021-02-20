@@ -12,7 +12,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { Toast } from 'vant'
+import { Toast, Dialog } from 'vant'
 import { deleteCart } from '@/api/cart'
 import UHeader from '@/components/Header'
 import UCartList from './components/CartList'
@@ -34,7 +34,9 @@ export default {
   },
   methods: {
     deleteItem (id) {
-      if (confirm('确定要删除吗?')) {
+      Dialog.confirm({
+        message: '确定要删除吗？'
+      }).then(() => {
         deleteCart(id).then(() => {
           Toast.success('删除成功')
           // 重新刷新列表
@@ -42,7 +44,8 @@ export default {
         }).catch(() => {
           Toast.fail('删除失败')
         })
-      }
+      }).catch(() => {
+      })
     }
   }
 }
