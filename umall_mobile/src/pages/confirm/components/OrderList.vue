@@ -7,7 +7,7 @@
           <img :src="item.img | recombinationImg" alt="item" />
           <div class="desc">
             <h3>{{ item.goodsname }}</h3>
-            <h4>规格属性:{{ item.specsattr }}</h4>
+            <h4>{{getSpecsName(item.specsid)}}-{{ item.specsattr }}</h4>
           </div>
         </div>
         <div class="price">
@@ -19,9 +19,9 @@
       <div class="purchasenumber">
         <h3>购买数量:</h3>
         <div class="number">
-          <i class="minus iconfont icon-jianhao"></i>
+          <i class="minus iconfont">&#xe607;</i>
           <input type="text" :value="item.num" />
-          <i class="plus iconfont icon-jiahao1"></i>
+          <i class="plus iconfont">&#xe620;</i>
         </div>
       </div>
     </div>
@@ -36,10 +36,33 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   props: {
     orderList: Array
+  },
+  computed: {
+    ...mapState({
+      specsList: state => state.specs.list
+    })
+  },
+  mounted () {
+    if (this.specsList.length === 0) {
+      // 重新获取规格数据
+      this.$store.dispatch('specs/getSpecsList')
+    }
+  },
+  methods: {
+    getSpecsName (specsId) {
+      const specs = this.specsList.find(item => item.id === specsId)
+      if (specs) {
+        return specs.specsname
+      } else {
+        return ''
+      }
+    }
   }
+
 }
 </script>
 
