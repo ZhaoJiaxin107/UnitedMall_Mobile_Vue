@@ -3,7 +3,8 @@
         <!-- discount -->
         <div class="deliverymethod">
             <h3>优惠券</h3>
-            <h3>无可用</h3>
+            <h3 v-if = "coupon === 0">无可用</h3>
+            <h3 v-else>可用{{coupon.toFixed(2)}}</h3>
         </div>
 
         <!-- credituse -->
@@ -12,7 +13,7 @@
             <div class="credit">
                 <input type="text" placeholder="输入积分">
                 <button>使用</button>
-                <span>可用<em>50</em>积分</span>
+                <span>可用<em>{{integral}}</em>积分</span>
             </div>
         </div>
     </div>
@@ -21,7 +22,10 @@
 
 <script>
 export default {
-
+  props: {
+    coupon: Number,
+    integral: Number
+  }
 }
 </script>
 

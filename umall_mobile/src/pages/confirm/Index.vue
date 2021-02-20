@@ -15,7 +15,9 @@
     <div class="padding"></div>
 
     <!-- discont | credit use -->
-    <u-discount />
+    <u-discount
+    :coupon = "coupon"
+    :integral = "integral"/>
     <!-- padding -->
     <div class="padding"></div>
 
