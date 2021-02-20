@@ -67,9 +67,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-left: .3rem;
 }
 .wrapconfirm .productinfoandprice .productinfo .desc > h3 {
   font-size: 0.23rem;
+  line-height: .3rem;
   color: #5a5a5a;
 }
 .wrapconfirm .productinfoandprice .productinfo .desc > h4 {

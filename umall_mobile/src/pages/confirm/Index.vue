@@ -7,7 +7,7 @@
     <div class="padding"></div>
 
     <!-- order list -->
-    <u-order-list />
+    <u-order-list :orderList = "orderList"/>
     <!-- padding -->
     <div class="padding"></div>
 
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import UHeader from '@/components/Header'
 import UAddress from './components/Address'
 import UOrderList from './components/OrderList'
@@ -34,6 +35,17 @@ export default {
     UOrderList,
     UDiscount,
     UFee
+  },
+  computed: {
+    ...mapState({
+      orderList: (state) => state.cart.list
+    })
+  },
+  mounted () {
+    // 重新获取订单数据
+    if (this.orderList.length === 0) {
+      this.$store.dispatch('cart/getCartList')
+    }
   }
 }
 </script>
