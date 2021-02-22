@@ -78,3 +78,107 @@ npm run dev
 
 * 显示个人信息
 
+
+
+### How to run a project
+
+```
+cd UMallAPI
+npm start
+```
+
+```
+cd umall_ mobile
+npm run dev
+Browser open localhost:8080
+```
+
+### major function
+
+#### 1.Registration
+
+* Using the form component in vant
+
+* Call the background API to complete the registration
+
+* The registration button is disabled while loading
+
+#### 2.Login
+
+* Using the form component in vant
+
+* Call the background API to complete the login
+
+* The user information of successful login is stored in sessionstorage
+
+* The login button is disabled when loading
+
+#### 3.Home page
+
+* Component form to complete the layout of the home page, in which the bottom navigation is the public part
+
+* Get the first level classification data from the backend management system, manage the data with vuex, and render it to the home page
+
+* Implementation of mobile carousel graph with swipe component
+
+* Rendering time limited seckill data
+
+* Tab component rendering commodity list
+
+* If you are in login status, click buy now to add a shopping cart
+
+* If you are not logged in, you will be prompted not to log in (toast) and jump to the login page
+
+#### 4.Commodity classification page
+
+* Component form to complete the layout of the classification page, the head and bottom are public parts
+
+* Get the first level classification and the second level classification data corresponding to the first level classification from the backend management system, manage the data with vuex, and render it to the classification page
+
+* Click the first level classification to display the second level classification corresponding to the first level classification
+
+* Click the secondary classification of goods, and the page will jump to the corresponding goods list page
+
+#### 5.Product list page
+
+* Component form to complete the commodity list page, the bottom of which is the public part
+
+* The page displays the commodity list of the corresponding secondary classification
+
+* Render commodity data
+
+* Vanlist component add commodity list bottom loading
+
+* Enter keywords in the search box to match the corresponding product information
+
+* If you are in login status, click buy now to add a shopping cart
+
+* If you are not logged in, you will be prompted not to log in (toast) and jump to the login page
+
+#### 6.Shopping cart page
+
+* Vant components checkbox, swipecell and stepper render shopping cart list
+
+* Vant components col, row and checkbox
+
+* Delete unwanted items from shopping cart
+
+* Click the select all button to select all products. If you select the select all button inversely, all products will not be selected
+
+* If all products are selected, the select all button is selected; otherwise, it is not selected
+
+* Calculate the total amount and preferential price of the selected goods by settlement calculation
+
+#### 7.Confirm order page
+
+* Complete the order page layout in component form
+
+* Render order list
+
+* Render total amount, freight, coupons, member benefits and points
+
+* Calculate the amount actually paid
+
+#### 8.Personal center page
+
+* Display personal information
