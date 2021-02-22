@@ -4,9 +4,17 @@ An united mall mobile project using vue.js and vant
 ### 如何运行项目
 
 ```
+git clone https://github.com/ZhaoJiaxin107/UnitedMall_Mobile_Vue.git
+```
+
+启动后台接口
+
+```
 cd UMallAPI
 npm start
 ```
+
+启动前台项目
 
 ```
 cd umall_mobile
@@ -83,9 +91,17 @@ npm run dev
 ### How to run a project
 
 ```
+git clone https://github.com/ZhaoJiaxin107/UnitedMall_Mobile_Vue.git
+```
+
+start background api
+
+```
 cd UMallAPI
 npm start
 ```
+
+start frontend project
 
 ```
 cd umall_ mobile
