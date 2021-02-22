@@ -105,9 +105,15 @@ export default {
     },
     totalNum () {
       let totalNum = 0
-      this.cartList.forEach(item => {
-        totalNum += item.num
-      })
+      for (let goods of this.cartList) {
+        if (this.checkedGroup.find(item => {
+          return item === goods.goodsid
+        })) {
+          totalNum += goods.num
+        } else {
+          continue
+        }
+      }
       return totalNum
     }
   },
