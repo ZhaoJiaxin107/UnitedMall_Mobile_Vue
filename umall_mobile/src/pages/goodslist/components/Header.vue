@@ -1,5 +1,6 @@
 <template>
-  <header>
+  <div class="uheader">
+    <header>
     <a>
       <img
         src="/static/images/iconimg/arrowLeft.jpg"
@@ -13,6 +14,7 @@
     </a>
     <i class="iconfont">&#xe626;</i>
   </header>
+  </div>
 </template>
 
 <script>

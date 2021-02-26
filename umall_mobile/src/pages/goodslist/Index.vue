@@ -3,6 +3,8 @@
     <div class="wrap">
         <!-- top -->
         <u-header @clearlist = "clearList"/>
+        <!-- occupy -->
+        <div class="header-occupy"></div>
         <!-- search -->
         <u-search @search = "searchKeyword"/>
         <!-- listpanel -->

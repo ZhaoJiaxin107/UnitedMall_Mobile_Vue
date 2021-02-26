@@ -1,5 +1,6 @@
 <template>
   <!-- header -->
+  <div class="uheader">
   <header>
     <a href="#">
       <img src="/static/images/index/logo.jpg" alt="logo" />
@@ -9,6 +10,7 @@
     </form>
     <i class="iconfont">&#xe626;</i>
   </header>
+  </div>
 </template>
 
 <script>

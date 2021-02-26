@@ -3,6 +3,8 @@
     <div class="wrap">
       <!-- header -->
       <u-header />
+      <!-- header-occupy -->
+      <div class="header-occupy"></div>
       <!-- navigation -->
       <u-navigation />
     </div>

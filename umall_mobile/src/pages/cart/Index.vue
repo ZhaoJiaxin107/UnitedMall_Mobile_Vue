@@ -4,8 +4,9 @@
     <u-cart-list
     :cartList = "cartList"
     @delete = "deleteItem"
+    @plus = "plusNum"
+    @minus = "minusNum"
     :length = "cartList.length"/>
-
     <div class = "addpadding"></div>
   </div>
 </template>
@@ -13,7 +14,7 @@
 <script>
 import { mapState } from 'vuex'
 import { Toast, Dialog } from 'vant'
-import { deleteCart } from '@/api/cart'
+import { deleteCart, updateCart } from '@/api/cart'
 import UHeader from '@/components/Header'
 import UCartList from './components/CartList'
 export default {
@@ -33,6 +34,20 @@ export default {
     }
   },
   methods: {
+    plusNum (id, type) {
+      // console.log(id, type)
+      updateCart(id, type).then(() => {
+        // 重新刷新列表
+        this.$store.dispatch('cart/getCartList')
+      })
+    },
+    minusNum (id, type) {
+      // console.log(id, type)
+      updateCart(id, type).then(() => {
+        // 重新刷新列表
+        this.$store.dispatch('cart/getCartList')
+      })
+    },
     deleteItem (id) {
       Dialog.confirm({
         message: '确定要删除吗？'

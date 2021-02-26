@@ -28,3 +28,16 @@ export const getCartList = (uid) => {
 export const deleteCart = (id) => {
   return http.post('/cartdelete', { id })
 }
+
+// 修改购物车
+// 1-数量自检 2-数量自增
+export const updateCart = (id, type) => {
+  // 判断参数
+  if (!id || !type) {
+    return Promise.reject(new Error('参数不完整'))
+  }
+  return http.post('/cartedit', {
+    id,
+    type
+  })
+}

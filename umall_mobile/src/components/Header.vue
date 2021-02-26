@@ -1,6 +1,7 @@
 <template>
   <!-- header -->
-    <div class="wrap headerbg">
+  <div>
+    <div class="wrap3 headerbg">
         <header>
             <a>
                 <img src="/static/images/iconimg/arrleft_03.jpg" @click = "goBack" alt="arrleft">
@@ -9,6 +10,8 @@
             <i class="iconfont">&#xe626;</i>
         </header>
     </div>
+    <div class = "header-occupy"></div>
+  </div>
 </template>
 
 <script>
@@ -29,12 +32,16 @@ export default {
 .headerbg {
   background-color: #f26b11;
 }
-.wrap {
+.wrap3 {
+  position: fixed;
+  left: 0;
+  top: 0;
   max-width: 750px;
   margin: 0 auto;
   width: 100%;
+  z-index: 20;
 }
-.wrap header {
+.wrap3 header {
   max-width: 750px;
   width: calc(100% - 30px*2);
   height: 0.9rem;
@@ -43,16 +50,21 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.wrap header a img {
+.wrap3 header a img {
   width: 0.17rem;
   height: 0.28rem;
 }
-.wrap header h3 {
+.wrap3 header h3 {
   font: 0.35rem/1 "微软雅黑";
   color: #fefcff;
 }
-.wrap header i {
+.wrap3 header i {
   font-size: 0.55rem;
   color: #fefcff;
+}
+.header-occupy {
+  width: calc(100% - 30px*2);
+  height: 0.9rem;
+  margin: 0 auto;
 }
 </style>

@@ -12,7 +12,7 @@
         class="goods-card"
         :thumb="item.img | recombinationImg"
       />
-      <van-stepper v-model.number="item.num" :name = "item.id" theme="round" integer />
+      <van-stepper v-model.number="item.num" :name = "item.id" theme="round" integer @plus = "plus(item.id, 2)" @minus = "minus(item.id, 1)" />
       <template #right>
         <van-button square text="删除" type="danger" class="delete-button" @click="deleteItem(item.id)"/>
       </template>
@@ -88,7 +88,7 @@ export default {
           continue
         }
       }
-      return sum.toFixed(2)
+      return sum
     },
     discount () {
       let discount = 0
@@ -117,14 +117,36 @@ export default {
       return totalNum
     }
   },
+  watch: {
+    checkedGroup (origin, newCheck) {
+      // console.log(newCheck)
+      this.orderList = []
+      for (let goods of this.cartList) {
+        if (this.checkedGroup.find(item =>
+          item === goods.goodsid
+        )) {
+          this.orderList.push(goods)
+        }
+      }
+      // console.log(this.orderList)
+      return this.orderList
+    }
+  },
   data () {
     return {
-      checkedGroup: []
+      checkedGroup: [], // 选中的goodsid
+      orderList: [] // 选中的物品
     }
   },
   methods: {
     deleteItem (id) {
       this.$emit('delete', id)
+    },
+    plus (id, type) {
+      this.$emit('plus', id, type)
+    },
+    minus (id, type) {
+      this.$emit('minus', id, type)
     },
     checkAll () {
       if (this.checkedGroup.length > 0) {

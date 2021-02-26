@@ -32,6 +32,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { updateCart } from '@/api/cart'
 import UHeader from '@/components/Header'
 import UAddress from './components/Address'
 import UOrderList from './components/OrderList'
@@ -64,13 +65,22 @@ export default {
     }
   },
   methods: {
-    addNum (id) {
-      const order = this.orderList.find((item) => item.goodsid === id)
-      order.num++
+    addNum (id, type) {
+      // const order = this.orderList.find((item) => item.goodsid === id)
+      // order.num++
+      updateCart(id, type).then(() => {
+        // 重新刷新列表
+        this.$store.dispatch('cart/getCartList')
+      })
     },
-    reduceNum (id) {
+    reduceNum (id, type) {
       const order = this.orderList.find((item) => item.goodsid === id)
-      if (order.num > 1) order.num--
+      if (order.num > 1) {
+        updateCart(id, type).then(() => {
+          // 重新刷新列表
+          this.$store.dispatch('cart/getCartList')
+        })
+      }
     }
   }
 }

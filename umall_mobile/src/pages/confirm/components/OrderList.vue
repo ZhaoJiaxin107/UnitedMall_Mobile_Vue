@@ -19,9 +19,9 @@
       <div class="purchasenumber">
         <h3>购买数量:</h3>
         <div class="number">
-          <i class="minus iconfont" @click = "reduceNumber(item.id)">&#xe607;</i>
+          <i class="minus iconfont" @click = "reduceNumber(item.id, 1)">&#xe607;</i>
           <input type="text" :value="item.num" />
-          <i class="plus iconfont" @click = "addNumber(item.id)">&#xe620;</i>
+          <i class="plus iconfont" @click = "addNumber(item.id, 2)">&#xe620;</i>
         </div>
       </div>
     </div>
@@ -61,11 +61,11 @@ export default {
         return ''
       }
     },
-    reduceNumber (id) {
-      this.$emit('reduce', id)
+    reduceNumber (id, type) {
+      this.$emit('reduce', id, type)
     },
-    addNumber (id) {
-      this.$emit('add', id)
+    addNumber (id, type) {
+      this.$emit('add', id, type)
     }
   }
 
