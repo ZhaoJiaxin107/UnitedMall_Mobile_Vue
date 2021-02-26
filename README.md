@@ -70,6 +70,7 @@ npm run dev
 
 * Vant组件Checkbox, SwipeCell, Stepper渲染购物车列表
 * Vant组件Col, Row, Checkbox渲染结算
+* 商品数量的增加和减少
 * 删除购物车中不想要的物品
 * 点击全选按钮，所有商品都选中，反选全选按钮，所有商品都不选中
 * 如果所有商品都选中，则全选按钮为选中，反之为不选中
